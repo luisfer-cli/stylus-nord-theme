@@ -1,0 +1,297 @@
+/* ==UserStyle==
+@name           GitHub Nord
+@namespace      github.com/luisfer
+@version        1.0.0
+@description    Tema Nord oscuro para GitHub
+@author         Luisfer
+==/UserStyle== */
+
+@-moz-document domain("github.com"), domain("gist.github.com") {
+  :root,
+  [data-color-mode],
+  [data-color-mode="dark"],
+  [data-dark-theme],
+  [data-dark-theme="dark"] {
+    color-scheme: dark !important;
+
+    /* Nord */
+    --nord0: #2e3440;
+    --nord1: #3b4252;
+    --nord2: #434c5e;
+    --nord3: #4c566a;
+    --nord4: #d8dee9;
+    --nord5: #e5e9f0;
+    --nord6: #eceff4;
+    --nord7: #8fbcbb;
+    --nord8: #88c0d0;
+    --nord9: #81a1c1;
+    --nord10: #5e81ac;
+    --nord11: #bf616a;
+    --nord12: #d08770;
+    --nord13: #ebcb8b;
+    --nord14: #a3be8c;
+    --nord15: #b48ead;
+
+    --bgColor-default: var(--nord0) !important;
+    --bgColor-inset: #252a33 !important;
+    --bgColor-muted: var(--nord1) !important;
+    --bgColor-emphasis: var(--nord3) !important;
+    --bgColor-neutral-muted: #4c566a55 !important;
+    --bgColor-neutral-emphasis: var(--nord3) !important;
+    --bgColor-accent-muted: #5e81ac33 !important;
+    --bgColor-accent-emphasis: var(--nord10) !important;
+    --bgColor-success-muted: #a3be8c33 !important;
+    --bgColor-success-emphasis: #7aa36f !important;
+    --bgColor-attention-muted: #ebcb8b33 !important;
+    --bgColor-attention-emphasis: #d9b76f !important;
+    --bgColor-danger-muted: #bf616a33 !important;
+    --bgColor-danger-emphasis: var(--nord11) !important;
+    --bgColor-done-muted: #b48ead33 !important;
+    --bgColor-done-emphasis: var(--nord15) !important;
+
+    --fgColor-default: var(--nord6) !important;
+    --fgColor-muted: var(--nord4) !important;
+    --fgColor-neutral: var(--nord4) !important;
+    --fgColor-accent: var(--nord8) !important;
+    --fgColor-link: var(--nord8) !important;
+    --fgColor-success: var(--nord14) !important;
+    --fgColor-attention: var(--nord13) !important;
+    --fgColor-danger: var(--nord11) !important;
+    --fgColor-done: var(--nord15) !important;
+    --fgColor-onEmphasis: var(--nord6) !important;
+
+    --borderColor-default: var(--nord2) !important;
+    --borderColor-muted: #4c566ab3 !important;
+    --borderColor-emphasis: var(--nord3) !important;
+    --borderColor-accent-emphasis: var(--nord8) !important;
+    --borderColor-accent-muted: #88c0d066 !important;
+    --borderColor-success-emphasis: var(--nord14) !important;
+    --borderColor-attention-emphasis: var(--nord13) !important;
+    --borderColor-danger-emphasis: var(--nord11) !important;
+    --borderColor-done-emphasis: var(--nord15) !important;
+    --borderColor-translucent: #d8dee926 !important;
+    --underlineNav-borderColor-active: var(--nord8) !important;
+    --sideNav-bgColor-selected: var(--nord1) !important;
+
+    --header-bgColor: #2e3440f2 !important;
+    --header-borderColor-divider: var(--nord2) !important;
+    --header-fgColor-default: var(--nord5) !important;
+    --header-fgColor-logo: var(--nord6) !important;
+    --headerSearch-bgColor: #252a33 !important;
+    --headerSearch-borderColor: var(--nord2) !important;
+
+    --control-bgColor-rest: var(--nord1) !important;
+    --control-bgColor-hover: var(--nord2) !important;
+    --control-bgColor-active: var(--nord3) !important;
+    --control-borderColor-rest: var(--nord3) !important;
+    --control-fgColor-rest: var(--nord6) !important;
+    --control-fgColor-placeholder: var(--nord4) !important;
+    --controlTrack-bgColor-rest: #252a33 !important;
+    --controlTrack-bgColor-hover: var(--nord2) !important;
+    --controlTrack-bgColor-active: var(--nord3) !important;
+    --controlKnob-bgColor-rest: var(--nord1) !important;
+    --controlKnob-borderColor-rest: var(--nord3) !important;
+    --button-default-bgColor-rest: var(--nord1) !important;
+    --button-default-bgColor-hover: var(--nord2) !important;
+    --button-primary-bgColor-rest: var(--nord10) !important;
+    --button-primary-bgColor-hover: #6a93c5 !important;
+    --button-primary-bgColor-active: #52749d !important;
+    --button-primary-borderColor-rest: #0000 !important;
+    --button-outline-fgColor-rest: var(--nord8) !important;
+    --button-danger-fgColor-rest: var(--nord11) !important;
+
+    --prettylights-syntax-comment: var(--nord3) !important;
+    --prettylights-syntax-constant: var(--nord15) !important;
+    --prettylights-syntax-entity: var(--nord8) !important;
+    --prettylights-syntax-keyword: var(--nord9) !important;
+    --prettylights-syntax-string: var(--nord14) !important;
+    --prettylights-syntax-variable: var(--nord4) !important;
+    --prettylights-syntax-entityTag: var(--nord8) !important;
+    --prettylights-syntax-storageModifierImport: var(--nord5) !important;
+    --prettylights-syntax-markup-heading: var(--nord8) !important;
+    --prettylights-syntax-markup-list: var(--nord13) !important;
+    --prettylights-syntax-markup-inserted-bg: #a3be8c26 !important;
+    --prettylights-syntax-markup-inserted-text: var(--nord14) !important;
+    --prettylights-syntax-markup-deleted-bg: #bf616a26 !important;
+    --prettylights-syntax-markup-deleted-text: var(--nord11) !important;
+    --prettylights-syntax-markup-changed-bg: #ebcb8b26 !important;
+    --prettylights-syntax-markup-changed-text: var(--nord13) !important;
+
+    --codeMirror-bgColor: var(--nord0) !important;
+    --codeMirror-gutters-bgColor: var(--nord0) !important;
+    --codeMirror-lines-bgColor: var(--nord0) !important;
+    --codeMirror-fgColor: var(--nord6) !important;
+    --codeMirror-cursor-fgColor: var(--nord6) !important;
+    --codeMirror-lineNumber-fgColor: var(--nord3) !important;
+    --codeMirror-activeline-bgColor: #3b425255 !important;
+    --codeMirror-selection-bgColor: #5e81ac66 !important;
+    --codeMirror-syntax-fgColor-comment: var(--nord3) !important;
+    --codeMirror-syntax-fgColor-keyword: var(--nord9) !important;
+    --codeMirror-syntax-fgColor-string: var(--nord14) !important;
+    --codeMirror-syntax-fgColor-constant: var(--nord15) !important;
+    --codeMirror-syntax-fgColor-variable: var(--nord4) !important;
+    --codeMirror-syntax-fgColor-entity: var(--nord8) !important;
+
+    --diffBlob-additionLine-bgColor: #a3be8c22 !important;
+    --diffBlob-additionNum-bgColor: #a3be8c44 !important;
+    --diffBlob-additionWord-bgColor: #a3be8c55 !important;
+    --diffBlob-deletionLine-bgColor: #bf616a22 !important;
+    --diffBlob-deletionNum-bgColor: #bf616a44 !important;
+    --diffBlob-deletionWord-bgColor: #bf616a55 !important;
+    --diffBlob-hunkLine-bgColor: #5e81ac2b !important;
+    --diffBlob-hunkNum-bgColor-rest: #5e81ac44 !important;
+
+    --contribution-default-bgColor-0: var(--nord1) !important;
+    --contribution-default-bgColor-1: #40533d !important;
+    --contribution-default-bgColor-2: #66805b !important;
+    --contribution-default-bgColor-3: #8fac7e !important;
+    --contribution-default-bgColor-4: var(--nord14) !important;
+
+    --selection-bgColor: #5e81ac99 !important;
+    --focus-outline-color: var(--nord8) !important;
+    --overlay-bgColor: var(--nord0) !important;
+    --overlay-backdrop-bgColor: #252a3380 !important;
+    --tooltip-bgColor: var(--nord2) !important;
+    --shadow-floating-small:
+      0 0 0 1px var(--nord2), 0 6px 18px #252a33aa !important;
+    --shadow-floating-medium:
+      0 0 0 1px var(--nord2), 0 12px 32px #252a33cc !important;
+    --shadow-floating-large:
+      0 0 0 1px var(--nord2), 0 24px 48px #252a33cc !important;
+  }
+
+  body,
+  .application-main,
+  .color-bg-default,
+  .Box,
+  .TimelineItem-body,
+  .markdown-body,
+  .react-directory-row,
+  .file,
+  .blob-wrapper,
+  .js-snippet-clipboard-copy-unpositioned,
+  .Layout-sidebar,
+  .Layout-main {
+    background-color: var(--bgColor-default) !important;
+    color: var(--fgColor-default) !important;
+  }
+
+  .color-bg-subtle,
+  .Box-header,
+  .Box-row,
+  .UnderlineNav,
+  .tabnav-tab,
+  .file-header,
+  .commit-tease,
+  .discussion-sidebar-item,
+  .gh-header,
+  .feed-item-content,
+  .js-calendar-graph-svg {
+    background-color: var(--bgColor-muted) !important;
+    border-color: var(--borderColor-default) !important;
+  }
+
+  a,
+  .Link--primary:hover,
+  .markdown-body a {
+    color: var(--fgColor-link) !important;
+  }
+
+  input,
+  textarea,
+  select,
+  .form-control,
+  .FormControl-input,
+  .FormControl-textarea {
+    background-color: var(--bgColor-inset) !important;
+    color: var(--fgColor-default) !important;
+    border-color: var(--borderColor-default) !important;
+  }
+
+  .BtnGroup .btn,
+  .btn,
+  .Button,
+  .Button--secondary {
+    background-color: var(--button-default-bgColor-rest) !important;
+    color: var(--fgColor-default) !important;
+    border-color: var(--borderColor-default) !important;
+  }
+
+  .btn:hover,
+  .Button:hover,
+  .Button--secondary:hover {
+    background-color: var(--button-default-bgColor-hover) !important;
+  }
+
+  .btn-primary,
+  .Button--primary {
+    background-color: var(--button-primary-bgColor-rest) !important;
+    color: var(--fgColor-onEmphasis) !important;
+    border-color: transparent !important;
+  }
+
+  .blob-code,
+  .blob-code-inner,
+  .blob-num,
+  pre,
+  code,
+  .highlight pre,
+  .highlight table {
+    background-color: var(--bgColor-default) !important;
+  }
+
+  .blob-num {
+    color: var(--nord3) !important;
+  }
+  .blob-code-inner {
+    color: var(--nord6) !important;
+  }
+
+  .prc-SegmentedControl-SegmentedControl-lqIXp,
+  .SegmentedControl {
+    background-color: var(--controlTrack-bgColor-rest) !important;
+    border-color: var(--borderColor-default) !important;
+  }
+
+  .prc-SegmentedControl-SegmentedControl-lqIXp::before,
+  .SegmentedControl-item--selected .Button,
+  .prc-SegmentedControl-Button-E48xz[aria-pressed="true"]
+    .prc-SegmentedControl-Content-1COlk {
+    background-color: var(--controlKnob-bgColor-rest) !important;
+    border-color: var(--controlKnob-borderColor-rest) !important;
+  }
+
+  .prc-SegmentedControl-Button-E48xz:not([aria-pressed="true"]):hover
+    .prc-SegmentedControl-Content-1COlk {
+    background-color: var(--controlTrack-bgColor-hover) !important;
+  }
+
+  .prc-components-UnderlineItem-7fP-n[aria-current]:not([aria-current="false"]),
+  .prc-components-UnderlineItem-7fP-n[aria-selected="true"],
+  .UnderlineNav-item[aria-current]:not([aria-current="false"]),
+  .UnderlineNav-item[aria-selected="true"] {
+    color: var(--nord6) !important;
+    background-color: var(--bgColor-neutral-muted) !important;
+  }
+
+  .prc-components-UnderlineItem-7fP-n[aria-current]:not(
+    [aria-current="false"]
+  )::after,
+  .prc-components-UnderlineItem-7fP-n[aria-selected="true"]::after,
+  .UnderlineNav-item[aria-current]:not([aria-current="false"])::after,
+  .UnderlineNav-item[aria-selected="true"]::after {
+    background-color: var(--underlineNav-borderColor-active) !important;
+  }
+
+  .menu-item[aria-current]:not([aria-current="false"]),
+  .SideNav-item[aria-current]:not([aria-current="false"]),
+  .SideNav-item[aria-selected="true"] {
+    color: var(--nord6) !important;
+    background-color: var(--sideNav-bgColor-selected) !important;
+  }
+
+  ::selection {
+    background: var(--selection-bgColor) !important;
+    color: var(--nord6) !important;
+  }
+}
