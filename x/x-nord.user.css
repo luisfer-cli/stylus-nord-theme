@@ -2,7 +2,7 @@
 @name         X Nord
 @namespace    local.x.nord
 @version      1.0.6
-@description  Tema Nord conservador para X/Twitter
+@description  Conservative Nord theme for X/Twitter
 @author       pi
 @match        https://x.com/*
 @match        https://twitter.com/*
@@ -57,7 +57,7 @@
     color: var(--nord6) !important;
   }
 
-  /* Texto: X mete colores inline, por eso se re-mapean los rgb originales. */
+  /* Text: X injects inline colors, so the original RGB values are remapped. */
   [style*="color:rgb(231,233,234)"],
   [style*="color: rgb(231, 233, 234)"] {
     color: var(--nord6) !important;
@@ -130,7 +130,7 @@
     background-color: rgba(46, 52, 64, .78) !important;
   }
 
-  /* Botones claros de X: Postear, Premium, etc. */
+  /* X light buttons: Post, Premium, etc. */
   [style*="background-color:rgb(239,243,244)"],
   [style*="background-color: rgb(239, 243, 244)"] {
     background-color: var(--nord8) !important;
@@ -176,7 +176,7 @@
 
   [data-testid="primaryColumn"],
   [data-testid="sidebarColumn"],
-  [aria-label="Cronologías de perfil"],
+  [aria-label="Profile timelines"],
   [role="tablist"],
   [role="article"],
   .r-1kqtdi0,
@@ -192,22 +192,22 @@
     background-color: var(--nord0) !important;
   }
 
-  aside[aria-label="Suscríbete a Premium"],
-  aside[aria-label="A quién seguir"],
-  div:has(> aside[aria-label="Suscríbete a Premium"]),
-  div:has(> aside[aria-label="A quién seguir"]) {
+  aside[aria-label="Subscribe to Premium"],
+  aside[aria-label="Who to follow"],
+  div:has(> aside[aria-label="Subscribe to Premium"]),
+  div:has(> aside[aria-label="Who to follow"]) {
     background-color: var(--nord1) !important;
     border-color: rgba(236, 239, 244, .14) !important;
   }
 
-  aside[aria-label="Suscríbete a Premium"] [role="link"][href*="premium"],
-  aside[aria-label="A quién seguir"] button[aria-label^="Seguir"] {
+  aside[aria-label="Subscribe to Premium"] [role="link"][href*="premium"],
+  aside[aria-label="Who to follow"] button[aria-label^="Follow"] {
     background-color: var(--nord8) !important;
     color: var(--nord0) !important;
   }
 
-  aside[aria-label="Suscríbete a Premium"] [role="link"][href*="premium"]:hover,
-  aside[aria-label="A quién seguir"] button[aria-label^="Seguir"]:hover {
+  aside[aria-label="Subscribe to Premium"] [role="link"][href*="premium"]:hover,
+  aside[aria-label="Who to follow"] button[aria-label^="Follow"]:hover {
     background-color: var(--nord7) !important;
   }
 
@@ -225,7 +225,7 @@
     color: rgba(216, 222, 233, .70) !important;
   }
 
-  button[aria-label="Administrar cronologías"],
+  button[aria-label="Manage timelines"],
   button[aria-label="Cualquier persona puede responder"],
   [data-testid="toolBar"] button:not([data-testid="tweetButtonInline"]) {
     background-color: transparent !important;
@@ -233,7 +233,7 @@
     border-color: transparent !important;
   }
 
-  button[aria-label="Administrar cronologías"] *,
+  button[aria-label="Manage timelines"] *,
   .r-1bwzh9t,
   svg.r-1bwzh9t,
   svg.r-1bwzh9t * {
@@ -242,14 +242,14 @@
     stroke: currentColor !important;
   }
 
-  button[aria-label="Administrar cronologías"]:hover,
+  button[aria-label="Manage timelines"]:hover,
   button[aria-label="Cualquier persona puede responder"]:hover,
   [data-testid="toolBar"] button:not([data-testid="tweetButtonInline"]):hover {
     background-color: rgba(136, 192, 208, .12) !important;
     color: var(--nord7) !important;
   }
 
-  button[aria-label="Administrar cronologías"]:hover *,
+  button[aria-label="Manage timelines"]:hover *,
   button:hover svg.r-1bwzh9t,
   button:hover svg.r-1bwzh9t * {
     color: var(--nord7) !important;
@@ -370,7 +370,7 @@
     color: var(--nord5) !important;
   }
 
-  /* Menús/popovers: Más, perfil, tres puntos, autocompletado. */
+  /* Menus/popovers: More, profile, three dots, autocomplete. */
   [role="menu"],
   [role="dialog"],
   [role="listbox"],

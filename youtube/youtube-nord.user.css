@@ -2,7 +2,7 @@
 @name         YouTube Nord
 @namespace    local.youtube.nord
 @version      1.0.4
-@description  Tema Nord conservador para YouTube
+@description  Conservative Nord theme for YouTube
 @author       pi
 @match        https://www.youtube.com/*
 @match        https://youtube.com/*
@@ -33,7 +33,7 @@
     --nord14: #a3be8c;
     --nord15: #b48ead;
 
-    /* Tokens nativos de YouTube/Polymer. */
+    /* Native YouTube/Polymer tokens. */
     --yt-spec-base-background: var(--nord0) !important;
     --yt-spec-raised-background: var(--nord1) !important;
     --yt-spec-menu-background: var(--nord1) !important;
@@ -104,7 +104,7 @@
     box-shadow: 0 1px 0 rgba(236, 239, 244, .10) !important;
   }
 
-  /* Buscador: solo colorear la cápsula interna, no todo el host. */
+  /* Search: only color the inner capsule, not the whole host. */
   yt-searchbox,
   #search-form,
   #search-input {
@@ -147,7 +147,7 @@
     color: rgba(216, 222, 233, .58) !important;
   }
 
-  /* Texto y enlaces. */
+  /* Text and links. */
   #video-title,
   h1,
   h2,
@@ -183,7 +183,7 @@
     color: var(--nord7) !important;
   }
 
-  /* Botones/chips sin romper geometría. */
+  /* Buttons/chips without breaking geometry. */
   yt-chip-cloud-chip-renderer,
   ytd-feed-filter-chip-bar-renderer yt-chip-cloud-chip-renderer,
   .ytChipShapeInactive,
@@ -286,7 +286,7 @@
     color: var(--nord0) !important;
   }
 
-  /* Página de video. */
+  /* Video page. */
   #cinematics,
   #cinematics-container,
   #cinematics-full-bleed-container {
@@ -334,7 +334,7 @@
     color: var(--nord5) !important;
   }
 
-  /* Iconos. */
+  /* Icons. */
   yt-icon,
   yt-icon-shape,
   .yt-icon-shape,
@@ -372,7 +372,7 @@
     color: var(--nord6) !important;
   }
 
-  /* Header de menús simples: notificaciones, cuenta, etc. */
+  /* Simple menu headers: notifications, account, etc. */
   ytd-simple-menu-header-renderer,
   ytd-simple-menu-header-renderer #buttons,
   ytd-simple-menu-header-renderer h2 {
@@ -396,7 +396,7 @@
     background: rgba(236, 239, 244, .10) !important;
   }
 
-  /* Formularios, tooltips y menús. */
+  /* Forms, tooltips, and menus. */
   textarea,
   input,
   tp-yt-paper-input,

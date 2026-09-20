@@ -1,8 +1,8 @@
 # Stylus Nord Theme
 
-Temas de usuario para [Stylus](https://github.com/openstyles/stylus) con la paleta [Nord](https://www.nordtheme.com/).
+User styles for [Stylus](https://github.com/openstyles/stylus) using the [Nord](https://www.nordtheme.com/) palette.
 
-## Temas
+## Themes
 
 - [ChatGPT Nord](chatgpt/chatgpt-nord.user.css)
 - [GitHub Nord](github/github-nord.user.css)
@@ -10,12 +10,12 @@ Temas de usuario para [Stylus](https://github.com/openstyles/stylus) con la pale
 - [X Nord](x/x-nord.user.css)
 - [YouTube Nord](youtube/youtube-nord.user.css)
 
-## Instalación
+## Installation
 
-1. Instala la extensión Stylus.
-2. Abre el archivo `.user.css` del tema que quieras usar.
-3. Copia el contenido en un nuevo estilo de Stylus o impórtalo desde la URL raw de GitHub.
+1. Install the Stylus extension.
+2. Open the `.user.css` file for the theme you want to use.
+3. Copy the contents into a new Stylus style or import it from the raw GitHub URL.
 
-## Paleta
+## Palette
 
-Usa la paleta Nord base (`nord0` a `nord15`) y mantiene la geometría original de cada sitio: cambia colores, no layouts.
+Uses the base Nord palette (`nord0` to `nord15`) and keeps each site's original geometry: colors change, layouts do not.

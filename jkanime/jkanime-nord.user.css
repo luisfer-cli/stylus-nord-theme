@@ -2,7 +2,7 @@
 @name         JKAnime Nord
 @namespace    local.jkanime.nord
 @version      1.0.1
-@description  Tema Nord para JKAnime
+@description  Nord theme for JKAnime
 @author       pi
 @match        https://jkanime.net/*
 @match        https://www.jkanime.net/*
@@ -38,7 +38,7 @@
     color: var(--nord6) !important;
   }
 
-  /* Header, navegación y footer. */
+  /* Header, navigation, and footer. */
   header,
   .header,
   .container-head,
@@ -69,7 +69,7 @@
     color: var(--nord6) !important;
   }
 
-  /* Texto/enlaces. */
+  /* Text/links. */
   h1,
   h2,
   h3,
@@ -246,7 +246,7 @@
     color: var(--nord6) !important;
   }
 
-  /* Iconos y acentos originales naranjas/azules. */
+  /* Original orange/blue icons and accents. */
   i,
   .ti,
   .ti-eye,

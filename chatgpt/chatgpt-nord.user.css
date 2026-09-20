@@ -2,7 +2,7 @@
 @name         ChatGPT Nord
 @namespace    local.chatgpt.nord
 @version      1.0.3
-@description  Tema Nord conservador para chatgpt.com
+@description  Conservative Nord theme for chatgpt.com
 @author       pi
 @match        https://chatgpt.com/*
 @match        https://chat.openai.com/*
@@ -32,7 +32,7 @@
     --nord14: #a3be8c;
     --nord15: #b48ead;
 
-    /* Recolorear tokens, no geometría: mantiene bordes, sombras y tamaños originales. */
+    /* Recolor tokens, not geometry: keep original borders, shadows, and sizes. */
     --bg-primary: var(--nord0) !important;
     --bg-secondary: var(--nord1) !important;
     --bg-tertiary: var(--nord2) !important;
@@ -114,7 +114,7 @@
     color: var(--theme-submit-btn-text) !important;
   }
 
-  /* Código: sin bloque rectangular extra alrededor. */
+  /* Code: no extra rectangular block around it. */
   [class*="code-block-surface"],
   [class*="bg-(--code-block-surface)"],
   [data-testid="code-block-viewer"],
@@ -179,7 +179,7 @@
     text-decoration-color: var(--nord7) !important;
   }
 
-  /* Popovers/menús Radix: perfil, tres puntos, opciones. */
+  /* Radix popovers/menus: profile, three dots, options. */
   [data-radix-popper-content-wrapper] > *,
   [role="menu"],
   [role="dialog"],
