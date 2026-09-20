@@ -1,0 +1,334 @@
+/* ==UserStyle==
+@name         LinkedIn Nord
+@namespace    local.linkedin.nord
+@version      1.0.1
+@description  Conservative Nord theme for LinkedIn
+@author       pi
+@match        https://www.linkedin.com/*
+@match        https://linkedin.com/*
+==/UserStyle== */
+
+@-moz-document domain("linkedin.com") {
+  :root,
+  html,
+  body {
+    color-scheme: dark !important;
+
+    --nord0: #2e3440;
+    --nord1: #3b4252;
+    --nord2: #434c5e;
+    --nord3: #4c566a;
+    --nord4: #d8dee9;
+    --nord5: #e5e9f0;
+    --nord6: #eceff4;
+    --nord7: #8fbcbb;
+    --nord8: #88c0d0;
+    --nord9: #81a1c1;
+    --nord10: #5e81ac;
+    --nord11: #bf616a;
+    --nord13: #ebcb8b;
+    --nord14: #a3be8c;
+
+    /* LinkedIn/Voyager tokens. */
+    --color-background: var(--nord0) !important;
+    --color-background-canvas: var(--nord0) !important;
+    --color-background-canvas-mobile: var(--nord0) !important;
+    --color-background-canvas-tint: var(--nord1) !important;
+    --color-background-container: var(--nord1) !important;
+    --color-background-container-tint: var(--nord2) !important;
+    --color-background-none-tint-hover: rgba(236, 239, 244, 0.08) !important;
+    --color-background-none-tint-active: rgba(236, 239, 244, 0.14) !important;
+    --color-background-scrim: rgba(46, 52, 64, 0.72) !important;
+
+    --color-text: var(--nord6) !important;
+    --color-text-active: var(--nord6) !important;
+    --color-text-hover: var(--nord6) !important;
+    --color-text-low-emphasis: var(--nord4) !important;
+    --color-text-low-emphasis-active: var(--nord5) !important;
+    --color-text-meta: rgba(216, 222, 233, 0.68) !important;
+    --color-text-meta-hover: var(--nord5) !important;
+    --color-text-solid: var(--nord6) !important;
+    --color-text-solid-low-emphasis: var(--nord4) !important;
+    --color-text-link: var(--nord8) !important;
+    --color-text-link-hover: var(--nord7) !important;
+    --color-text-link-active: var(--nord9) !important;
+    --color-text-link-visited: var(--nord15, #b48ead) !important;
+
+    --color-action: var(--nord8) !important;
+    --color-action-hover: var(--nord7) !important;
+    --color-action-active: var(--nord9) !important;
+    --color-icon: var(--nord5) !important;
+    --color-icon-active: var(--nord8) !important;
+    --color-icon-nav: var(--nord5) !important;
+
+    --color-border: rgba(236, 239, 244, 0.16) !important;
+    --color-border-faint: rgba(236, 239, 244, 0.1) !important;
+    --color-border-low-emphasis: rgba(236, 239, 244, 0.2) !important;
+    --color-shadow: rgba(0, 0, 0, 0.45) !important;
+    --color-shadow-supplemental: rgba(0, 0, 0, 0.35) !important;
+
+    --color-button-container-primary: var(--nord8) !important;
+    --color-button-container-primary-hover: var(--nord7) !important;
+    --color-button-label-primary: var(--nord0) !important;
+    --color-search-input-background: var(--nord2) !important;
+    --color-search-input-background-active: var(--nord2) !important;
+
+    /* New LinkedIn atom vars seen in html.txt/other.txt. */
+    --e48ba586: var(--nord1) !important;
+    --f2a34671: var(--nord2) !important;
+    --_00020729: var(--nord2) !important;
+    --de03a541: rgba(236, 239, 244, 0.08) !important;
+    --d8b8549c: rgba(236, 239, 244, 0.14) !important;
+    --_5011e8a3: var(--nord0) !important;
+    --dfc5b897: var(--nord2) !important;
+    --_2e64f7b7: var(--nord6) !important;
+    --e9b047e7: var(--nord6) !important;
+    --_989ee30c: var(--nord5) !important;
+    --_064e330d: rgba(216, 222, 233, 0.68) !important;
+    --b7bb0490: var(--nord8) !important;
+    --_54baf318: rgba(216, 222, 233, 0.68) !important;
+    --e5cb9f46: var(--nord4) !important;
+    --_781091d0: rgba(236, 239, 244, 0.14) !important;
+  }
+
+  html,
+  body,
+  .application-outlet,
+  .authentication-outlet,
+  main,
+  aside,
+  .scaffold-layout,
+  .scaffold-layout__main,
+  .scaffold-layout__aside,
+  .scaffold-layout__sidebar {
+    background-color: var(--nord0) !important;
+    color: var(--nord6) !important;
+  }
+
+  a,
+  a:visited,
+  .app-aware-link {
+    color: var(--nord8) !important;
+  }
+
+  a:hover,
+  .app-aware-link:hover {
+    color: var(--nord7) !important;
+  }
+
+  .global-nav,
+  .global-nav__content,
+  [data-testid="primary-nav"],
+  .artdeco-card,
+  .feed-shared-update-v2,
+  .share-box-feed-entry__closed-share-box,
+  .profile-card,
+  .pv-profile-card,
+  .org-top-card,
+  .jobs-search-results-list,
+  .jobs-search-results-list__list-item,
+  .msg-overlay-list-bubble,
+  .msg-overlay-conversation-bubble,
+  .artdeco-modal,
+  .artdeco-dropdown__content,
+  .artdeco-hoverable-content__shell {
+    background-color: var(--nord1) !important;
+    color: var(--nord6) !important;
+    border-color: rgba(236, 239, 244, 0.14) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28) !important;
+  }
+
+  .artdeco-card--with-hover:hover,
+  .feed-shared-update-v2:hover,
+  .feed-shared-social-action-bar button:hover,
+  .global-nav__primary-link:hover,
+  .artdeco-list__item:hover,
+  .msg-conversation-listitem:hover {
+    background-color: var(--nord2) !important;
+  }
+
+  input,
+  textarea,
+  select,
+  .search-global-typeahead__input,
+  .jobs-search-box__text-input,
+  .msg-form__contenteditable,
+  .ql-editor {
+    background-color: var(--nord2) !important;
+    color: var(--nord6) !important;
+    border-color: rgba(236, 239, 244, 0.16) !important;
+    caret-color: var(--nord8) !important;
+  }
+
+  input::placeholder,
+  textarea::placeholder,
+  .ql-placeholder,
+  .public-DraftEditorPlaceholder-root {
+    color: rgba(216, 222, 233, 0.62) !important;
+  }
+
+  button,
+  .artdeco-button,
+  .feed-shared-social-action-bar button,
+  .social-actions-button {
+    border-color: rgba(236, 239, 244, 0.16) !important;
+  }
+
+  .artdeco-button--primary,
+  .artdeco-button--premium,
+  button[type="submit"] {
+    background-color: var(--nord8) !important;
+    color: var(--nord0) !important;
+    border-color: transparent !important;
+  }
+
+  .artdeco-button--primary:hover,
+  .artdeco-button--premium:hover,
+  button[type="submit"]:hover {
+    background-color: var(--nord7) !important;
+  }
+
+  .artdeco-button--secondary,
+  .artdeco-button--tertiary {
+    background-color: transparent !important;
+    color: var(--nord8) !important;
+  }
+
+  .artdeco-button--secondary:hover,
+  .artdeco-button--tertiary:hover {
+    background-color: rgba(136, 192, 208, 0.12) !important;
+    color: var(--nord7) !important;
+  }
+
+  .t-black,
+  .t-bold,
+  .t-16,
+  .t-14,
+  .feed-shared-text,
+  .update-components-text,
+  .break-words,
+  [style*="color: rgba(0, 0, 0"],
+  [style*="color: rgb(0, 0, 0"],
+  [style*="color:#000"],
+  [style*="color: #000"] {
+    color: var(--nord6) !important;
+  }
+
+  .t-black--light,
+  .t-12,
+  .feed-shared-actor__sub-description,
+  .feed-shared-actor__description,
+  .update-components-actor__description,
+  .update-components-actor__sub-description {
+    color: rgba(216, 222, 233, 0.68) !important;
+  }
+
+  svg,
+  li-icon,
+  .artdeco-button__icon,
+  .global-nav__icon {
+    color: var(--nord5) !important;
+    fill: currentColor !important;
+  }
+
+  .global-nav__primary-link--active,
+  .global-nav__primary-link--active svg,
+  .notification-badge,
+  .artdeco-pill--selected {
+    color: var(--nord8) !important;
+    border-color: var(--nord8) !important;
+  }
+
+  .artdeco-pill,
+  .feed-shared-control-menu__trigger,
+  .comments-comment-box,
+  .comments-comment-texteditor,
+  .msg-form {
+    background-color: var(--nord2) !important;
+    color: var(--nord6) !important;
+    border-color: rgba(236, 239, 244, 0.14) !important;
+  }
+
+  .artdeco-toast-item,
+  .artdeco-inline-feedback,
+  .artdeco-empty-state {
+    background-color: var(--nord1) !important;
+    color: var(--nord6) !important;
+    border-color: rgba(236, 239, 244, 0.14) !important;
+  }
+
+  /* New feed/profile markup from html.txt + other.txt. */
+  ._670e9421,
+  div:has(> [aria-label="Crear publicación"]),
+  div[role="listitem"]:has([aria-label*="reacción"]),
+  div[role="listitem"]:has(a[href*="/feed/update/"]),
+  div[id$="activity_posts_pillContent"] > div > div,
+  section:has(a[href*="/feed/update/"]) {
+    background-color: var(--nord1) !important;
+    color: var(--nord6) !important;
+    border-color: rgba(236, 239, 244, 0.14) !important;
+    box-shadow: 0 0 0 1px rgba(236, 239, 244, 0.08) !important;
+  }
+
+  ._263a698f:hover,
+  ._43c05d51:hover,
+  ._38c68773:hover,
+  div[role="listitem"] button:hover,
+  div[role="listitem"] a:hover,
+  div:has(> [aria-label="Crear publicación"]):hover {
+    background-color: var(--nord2) !important;
+  }
+
+  ._90d38c7f,
+  .d89a6b59,
+  .feed-shared-update-v2 span,
+  div[role="listitem"] span,
+  div[role="listitem"] p,
+  div[role="listitem"] button {
+    color: var(--nord6) !important;
+  }
+
+  ._2a65d943,
+  .feed-shared-actor__sub-description,
+  div[role="listitem"] time,
+  div[role="listitem"] small {
+    color: rgba(216, 222, 233, 0.68) !important;
+  }
+
+  ._5bb402f1,
+  div[role="listitem"] :is(button, a) > span:first-child {
+    color: var(--nord5) !important;
+  }
+
+  ._5bb402f1:hover,
+  div[role="listitem"] :is(button, a):hover > span:first-child {
+    color: var(--nord8) !important;
+    background-color: rgba(136, 192, 208, 0.12) !important;
+  }
+
+  [style*="background-color: rgb(255, 255, 255)"],
+  [style*="background-color:#fff"],
+  [style*="background-color: #fff"] {
+    background-color: var(--nord1) !important;
+  }
+
+  [style*="background-color: rgb(240, 244, 247)"],
+  [style*="background-color: rgb(244, 242, 238)"],
+  [style*="background-color: #f4f2ee"] {
+    background-color: var(--nord0) !important;
+  }
+
+  ::selection {
+    background: rgba(136, 192, 208, 0.35) !important;
+    color: var(--nord6) !important;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(216, 222, 233, 0.22) !important;
+    border-radius: 999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(216, 222, 233, 0.36) !important;
+  }
+}

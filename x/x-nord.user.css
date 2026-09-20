@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         X Nord
 @namespace    local.x.nord
-@version      1.0.6
+@version      1.0.24
 @description  Conservative Nord theme for X/Twitter
 @author       pi
 @match        https://x.com/*
@@ -20,7 +20,7 @@
     --border-color: var(--nord2) !important;
     --color: var(--nord4) !important;
     --color-emphasis: var(--nord6) !important;
-    --hover-bg-color: rgba(236, 239, 244, .10) !important;
+    --hover-bg-color: rgba(236, 239, 244, 0.1) !important;
     --cpft-text-primary: var(--nord6) !important;
     --primary: 136 192 208 !important;
     --input: 220 16% 31% !important;
@@ -65,7 +65,7 @@
 
   [style*="color:rgb(113,118,123)"],
   [style*="color: rgb(113, 118, 123)"] {
-    color: rgba(216, 222, 233, .58) !important;
+    color: rgba(216, 222, 233, 0.58) !important;
   }
 
   [style*="color:rgb(29,155,240)"],
@@ -108,7 +108,7 @@
   }
 
   .r-5zmot {
-    background-color: rgba(46, 52, 64, .78) !important;
+    background-color: rgba(46, 52, 64, 0.78) !important;
   }
 
   [style*="background-color:rgb(0,0,0)"],
@@ -127,13 +127,19 @@
 
   [style*="background-color:rgba(15,20,25,0.75)"],
   [style*="background-color: rgba(15, 20, 25, 0.75)"] {
-    background-color: rgba(46, 52, 64, .78) !important;
+    background-color: rgba(46, 52, 64, 0.78) !important;
   }
 
   /* X light buttons: Post, Premium, etc. */
   [style*="background-color:rgb(239,243,244)"],
   [style*="background-color: rgb(239, 243, 244)"] {
     background-color: var(--nord8) !important;
+    color: var(--nord0) !important;
+  }
+
+  [style*="background-color:rgb(239,243,244)"] [style*="color:rgb(15,20,25)"],
+  [style*="background-color: rgb(239, 243, 244)"]
+    [style*="color: rgb(15, 20, 25)"] {
     color: var(--nord0) !important;
   }
 
@@ -154,9 +160,14 @@
   }
 
   nav[role="navigation"] [role="link"]:hover,
-  nav[role="navigation"] [role="button"]:hover,
+  nav[role="navigation"] [role="button"]:hover {
+    background-color: transparent !important;
+  }
+
+  nav[role="navigation"] [role="link"]:hover > div,
+  nav[role="navigation"] [role="button"]:hover > div,
   [data-testid="UserCell"]:hover {
-    background-color: rgba(236, 239, 244, .10) !important;
+    background-color: rgba(236, 239, 244, 0.1) !important;
   }
 
   [data-testid="SideNav_NewTweet_Button"]:hover,
@@ -171,7 +182,7 @@
   [style*="border-color: rgb(47, 51, 54)"],
   [style*="border-color:rgb(83,100,113)"],
   [style*="border-color: rgb(83, 100, 113)"] {
-    border-color: rgba(236, 239, 244, .16) !important;
+    border-color: rgba(236, 239, 244, 0.16) !important;
   }
 
   [data-testid="primaryColumn"],
@@ -184,7 +195,7 @@
   .r-1igl3o0,
   .r-2sztyj,
   .r-1aihyag {
-    border-color: rgba(236, 239, 244, .12) !important;
+    border-color: rgba(236, 239, 244, 0.12) !important;
   }
 
   /* Fondos de X hechos con clases generadas. */
@@ -197,7 +208,7 @@
   div:has(> aside[aria-label="Subscribe to Premium"]),
   div:has(> aside[aria-label="Who to follow"]) {
     background-color: var(--nord1) !important;
-    border-color: rgba(236, 239, 244, .14) !important;
+    border-color: rgba(236, 239, 244, 0.14) !important;
   }
 
   aside[aria-label="Subscribe to Premium"] [role="link"][href*="premium"],
@@ -211,29 +222,50 @@
     background-color: var(--nord7) !important;
   }
 
-  /* Composer / donde se twittea. */
-  div:has([data-testid="tweetTextarea_0"]),
+  /* Composer / post.html. */
+  div:has([data-testid="app-bar-close"]):has([data-testid="tweetTextarea_0"]),
+  div:has([data-testid="tweetTextarea_0"]):has([data-testid="tweetButton"]),
   div:has(> [data-testid="tweetTextarea_0RichTextInputContainer"]),
   [data-testid="tweetTextarea_0RichTextInputContainer"],
   [data-testid="toolBar"] {
     background-color: var(--nord0) !important;
     color: var(--nord6) !important;
+    border-color: rgba(236, 239, 244, 0.14) !important;
   }
 
   [data-testid="tweetTextarea_0"],
-  .public-DraftEditorPlaceholder-root {
-    color: rgba(216, 222, 233, .70) !important;
+  [data-testid="tweetTextarea_0"] *,
+  .public-DraftEditor-content,
+  .public-DraftEditor-content * {
+    color: var(--nord6) !important;
+  }
+
+  .public-DraftEditorPlaceholder-root,
+  .public-DraftEditorPlaceholder-inner {
+    color: rgba(216, 222, 233, 0.7) !important;
   }
 
   button[aria-label="Manage timelines"],
+  button[aria-label="Administrar cronologías"],
   button[aria-label="Cualquier persona puede responder"],
-  [data-testid="toolBar"] button:not([data-testid="tweetButtonInline"]) {
+  [data-testid="toolBar"] button:not([data-testid="tweetButtonInline"]),
+  [data-testid="toolBar"] button:not([data-testid="tweetButtonInline"]) * {
     background-color: transparent !important;
     color: var(--nord8) !important;
     border-color: transparent !important;
+    fill: currentColor !important;
+    stroke: currentColor !important;
+  }
+
+  [data-testid="toolBar"] button[disabled],
+  [data-testid="toolBar"] button[disabled] *,
+  [data-testid="geoButton"],
+  [data-testid="geoButton"] * {
+    color: rgba(216, 222, 233, 0.36) !important;
   }
 
   button[aria-label="Manage timelines"] *,
+  button[aria-label="Administrar cronologías"] *,
   .r-1bwzh9t,
   svg.r-1bwzh9t,
   svg.r-1bwzh9t * {
@@ -243,13 +275,17 @@
   }
 
   button[aria-label="Manage timelines"]:hover,
+  button[aria-label="Administrar cronologías"]:hover,
   button[aria-label="Cualquier persona puede responder"]:hover,
-  [data-testid="toolBar"] button:not([data-testid="tweetButtonInline"]):hover {
-    background-color: rgba(136, 192, 208, .12) !important;
+  [data-testid="toolBar"]
+    button:not([disabled]):not([data-testid="tweetButtonInline"]):hover {
+    background-color: rgba(136, 192, 208, 0.12) !important;
     color: var(--nord7) !important;
   }
 
   button[aria-label="Manage timelines"]:hover *,
+  button[aria-label="Administrar cronologías"]:hover *,
+  [data-testid="toolBar"] button:not([disabled]):hover *,
   button:hover svg.r-1bwzh9t,
   button:hover svg.r-1bwzh9t * {
     color: var(--nord7) !important;
@@ -258,12 +294,24 @@
   [data-testid="tweetButtonInline"],
   [data-testid="tweetButton"] {
     background-color: var(--nord8) !important;
+    border-color: transparent !important;
     color: var(--nord0) !important;
   }
 
   [data-testid="tweetButtonInline"] *,
   [data-testid="tweetButton"] * {
     color: var(--nord0) !important;
+  }
+
+  [data-testid="tweetButtonInline"][disabled],
+  [data-testid="tweetButton"][disabled] {
+    background-color: var(--nord3) !important;
+    color: rgba(236, 239, 244, 0.5) !important;
+  }
+
+  [data-testid="tweetButtonInline"][disabled] *,
+  [data-testid="tweetButton"][disabled] * {
+    color: rgba(236, 239, 244, 0.5) !important;
   }
 
   [data-testid="unsentButton"],
@@ -274,18 +322,83 @@
   }
 
   [data-testid="unsentButton"]:hover {
-    background-color: rgba(136, 192, 208, .12) !important;
+    background-color: rgba(136, 192, 208, 0.12) !important;
   }
 
   [data-testid="progressBar-bar"] {
     background-color: var(--nord8) !important;
   }
 
-  div:has([data-testid="app-bar-close"]):has([data-testid="tweetTextarea_0"]),
-  div:has([data-testid="tweetTextarea_0"]):has([data-testid="tweetButton"]) {
+  /* Modal de postear: selectores comunes en temas de X/Stylus. */
+  body:has([aria-labelledby="modal-header"] [data-testid="tweetTextarea_0"])
+  [data-testid="mask"] {
+    background-color: rgba(46, 52, 64, 0.28) !important;
+    backdrop-filter: none !important;
+  }
+
+  [aria-labelledby="modal-header"]:has([data-testid="tweetTextarea_0"]),
+  [aria-labelledby="modal-header"]:has([data-testid="tweetTextarea_0"]) > div,
+  [aria-labelledby="modal-header"]:has([data-testid="tweetTextarea_0"])
+    [data-testid="tweetTextarea_0RichTextInputContainer"] {
     background-color: var(--nord0) !important;
     color: var(--nord6) !important;
-    border-color: rgba(236, 239, 244, .14) !important;
+    border-color: rgba(236, 239, 244, 0.14) !important;
+  }
+
+  [aria-labelledby="modal-header"]:has([data-testid="tweetTextarea_0"])
+    [role="button"]:hover,
+  [aria-labelledby="modal-header"]:has([data-testid="tweetTextarea_0"])
+    button:hover {
+    background-color: rgba(236, 239, 244, 0.1) !important;
+  }
+
+  /* Selectores que usan otros userstyles: data-testid/aria e inline RGB, no clases r-* frágiles. */
+  [aria-label="Post"],
+  [aria-label="Postear"],
+  [data-testid="addButton"],
+  button[style*="rgb(29, 155, 240);"]:not(.css-146c3p1) {
+    background-color: var(--nord8) !important;
+    border-color: transparent !important;
+    color: var(--nord0) !important;
+  }
+
+  [aria-label="Post"] *,
+  [aria-label="Postear"] *,
+  [data-testid="addButton"] * {
+    color: var(--nord0) !important;
+  }
+
+  div:has([data-testid="tweetTextarea_0"]) [style*="color: rgb(29, 155, 240)"],
+  div:has([data-testid="tweetTextarea_0"]) [style*="color:rgb(29,155,240)"] {
+    color: var(--nord8) !important;
+  }
+
+  div:has([data-testid="tweetTextarea_0"]) [style*="color: rgb(231, 233, 234)"],
+  div:has([data-testid="tweetTextarea_0"]) [style*="color:rgb(231,233,234)"] {
+    color: var(--nord6) !important;
+  }
+
+  div:has([data-testid="tweetTextarea_0"]) [style*="color: rgb(239, 243, 244)"],
+  div:has([data-testid="tweetTextarea_0"]) [style*="color:rgb(239,243,244)"] {
+    color: var(--nord5) !important;
+  }
+
+  div:has([data-testid="tweetTextarea_0"]) [style*="color: rgb(255, 255, 255)"],
+  div:has([data-testid="tweetTextarea_0"]) [style*="color:rgb(255,255,255)"] {
+    color: rgba(216, 222, 233, 0.5) !important;
+  }
+
+  div:has([data-testid="tweetTextarea_0"])
+    [style*="background-color: rgba(15, 20, 25, 0.75)"],
+  div:has([data-testid="tweetTextarea_0"])
+    [style*="background-color:rgba(15,20,25,0.75)"] {
+    background-color: rgba(46, 52, 64, 0.78) !important;
+  }
+
+  article [contenteditable="true"],
+  div:has([data-testid="tweetTextarea_0"]) [contenteditable="true"] {
+    caret-color: var(--nord8) !important;
+    color: var(--nord6) !important;
   }
 
   /* Search y campos. */
@@ -296,11 +409,11 @@
   [data-testid="SearchBox_Search_Input_label"] {
     background-color: var(--nord1) !important;
     color: var(--nord6) !important;
-    border-color: rgba(236, 239, 244, .12) !important;
+    border-color: rgba(236, 239, 244, 0.12) !important;
   }
 
   input::placeholder {
-    color: rgba(216, 222, 233, .58) !important;
+    color: rgba(216, 222, 233, 0.58) !important;
   }
 
   /* Cajones inferiores: Chat y Grok, sin hover rectangular que sobresalga. */
@@ -312,7 +425,7 @@
   [data-testid="GrokDrawerHeader"],
   [data-testid="chat-drawer-main"] {
     background-color: var(--nord1) !important;
-    border-color: rgba(236, 239, 244, .14) !important;
+    border-color: rgba(236, 239, 244, 0.14) !important;
   }
 
   [data-testid="GrokDrawerHeader"]:hover,
@@ -331,7 +444,7 @@
 
   [data-testid="app-bar-back"]:hover,
   [data-testid="app-bar-close"]:hover {
-    background-color: rgba(236, 239, 244, .10) !important;
+    background-color: rgba(236, 239, 244, 0.1) !important;
   }
 
   [style*="border-bottom: 2px solid rgb(239, 243, 244)"],
@@ -339,18 +452,19 @@
     border-bottom-color: var(--nord5) !important;
   }
 
-  /* Grok expandido. */
+  /* Grok expandido. No usar div:has(textarea): pinta ancestros enormes. */
   [data-testid="GrokDrawerHeader"],
   [data-testid="GrokDrawerHeader"] button,
-  div:has(textarea[placeholder="Pregunta cualquier cosa"]),
-  div:has(> textarea[placeholder="Pregunta cualquier cosa"]) {
+  [data-testid="GrokDrawer"]
+    div:has(> textarea[placeholder="Pregunta cualquier cosa"]),
+  [data-testid="GrokDrawer"] div:has(> textarea[placeholder="Ask anything"]) {
     background-color: var(--nord1) !important;
     color: var(--nord6) !important;
-    border-color: rgba(236, 239, 244, .14) !important;
+    border-color: rgba(236, 239, 244, 0.14) !important;
   }
 
   [data-testid="GrokDrawerHeader"] button:hover,
-  div:has(textarea[placeholder="Pregunta cualquier cosa"]) button:hover {
+  [data-testid="GrokDrawer"] button:hover {
     background-color: var(--nord2) !important;
   }
 
@@ -360,13 +474,75 @@
   }
 
   textarea[placeholder="Pregunta cualquier cosa"]::placeholder {
-    color: rgba(216, 222, 233, .58) !important;
+    color: rgba(216, 222, 233, 0.58) !important;
   }
 
-  div:has(textarea[placeholder="Pregunta cualquier cosa"]) button[style*="background-color: rgb(0, 0, 0)"],
-  div:has(textarea[placeholder="Pregunta cualquier cosa"]) button[style*="background-color:rgb(0,0,0)"] {
+  /* Grok mete un canvas/capa decorativa que se sale del drawer; fuera.
+     Solo se quitan capas decorativas (canvas y capas fijas/absolutas sin
+     interacción o marcadas aria-hidden). Nunca el contenido real del
+     drawer: la cita, la respuesta de Grok o el input. */
+  [data-testid="GrokDrawer"] canvas,
+  [data-testid="GrokDrawer"] .r-1hkj23p.r-yn5ncy.r-clrlgt.r-1ec6tlx,
+  [data-testid="GrokDrawer"] .r-1tsuqlv.r-1xcajam.r-ipm5af.r-lrvibr,
+  [data-testid="GrokDrawer"] div[aria-hidden="true"][style*="position: fixed"],
+  [data-testid="GrokDrawer"]
+    div[aria-hidden="true"][style*="position: absolute"],
+  [data-testid="GrokDrawer"] div[style*="pointer-events: none"][style*="position: fixed"],
+  [data-testid="GrokDrawer"]
+    div[style*="pointer-events: none"][style*="position: absolute"] {
+    display: none !important;
+  }
+
+  [data-testid="GrokDrawer"] {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    contain: paint !important;
+  }
+
+  /* El bloque que se veía como "fondo" era un div decorativo absolutizado. */
+  [data-testid="GrokDrawer"] .r-uef6q5,
+  [data-testid="GrokDrawer"] .r-yn5ncy,
+  [data-testid="GrokDrawer"] .r-clrlgt,
+  [data-testid="GrokDrawer"] .r-1tsuqlv,
+  [data-testid="GrokDrawer"] .r-1xcajam,
+  [data-testid="GrokDrawer"] .r-ipm5af {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+
+  /* Grok mete un fondo estrellado/gradiente a pantalla completa; fuera. */
+  body:has([role="dialog"]) *,
+  body:has([role="dialog"]) *::before,
+  body:has([role="dialog"]) *::after {
+    background-image: none !important;
+  }
+
+  body:has([role="dialog"])
+    [aria-hidden="true"]:is(svg, canvas, img, div)[style*="position: fixed"],
+  body:has([role="dialog"])
+    [aria-hidden="true"]:is(svg, canvas, img, div)[style*="position: absolute"],
+  body:has([role="dialog"])
+    [style*="pointer-events: none"]:is(
+      svg,
+      canvas,
+      img,
+      div
+    )[style*="position: fixed"],
+  body:has([role="dialog"])
+    [style*="pointer-events: none"]:is(
+      svg,
+      canvas,
+      img,
+      div
+    )[style*="position: absolute"] {
+    display: none !important;
+  }
+
+  [data-testid="GrokDrawer"] button[style*="background-color: rgb(0, 0, 0)"],
+  [data-testid="GrokDrawer"] button[style*="background-color:rgb(0,0,0)"] {
     background-color: var(--nord0) !important;
-    border-color: rgba(236, 239, 244, .16) !important;
+    border-color: rgba(236, 239, 244, 0.16) !important;
     color: var(--nord5) !important;
   }
 
@@ -381,8 +557,8 @@
   div[style*="box-shadow"] {
     background-color: var(--nord1) !important;
     color: var(--nord6) !important;
-    border-color: rgba(236, 239, 244, .14) !important;
-    box-shadow: 0 18px 50px rgba(0, 0, 0, .38) !important;
+    border-color: rgba(236, 239, 244, 0.14) !important;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.38) !important;
   }
 
   [role="menuitem"],
@@ -394,8 +570,38 @@
   [role="menuitem"]:hover,
   [role="option"]:hover,
   [data-testid="Dropdown"] [role="button"]:hover {
-    background-color: rgba(236, 239, 244, .10) !important;
+    background-color: rgba(236, 239, 244, 0.1) !important;
     color: var(--nord6) !important;
+  }
+
+  /* Modal de postear, override final: el mask de X tapa toda la web. */
+  [data-testid="mask"] {
+    background: transparent !important;
+    background-color: transparent !important;
+    backdrop-filter: none !important;
+  }
+
+  [aria-modal="true"][role="dialog"]:has([data-testid^="tweetTextarea_0"]),
+  [aria-modal="true"][role="dialog"]:has([data-testid^="tweetTextarea_0"])
+    > div,
+  [aria-modal="true"][role="dialog"]:has([data-testid^="tweetTextarea_0"])
+    [data-testid="tweetTextarea_0RichTextInputContainer"],
+  [aria-modal="true"][role="dialog"]:has([data-testid^="tweetTextarea_0"])
+    [data-testid="toolBar"] {
+    background-color: var(--nord0) !important;
+    color: var(--nord6) !important;
+    border-color: rgba(236, 239, 244, 0.14) !important;
+  }
+
+  [aria-modal="true"][role="dialog"]:has([data-testid^="tweetTextarea_0"])
+    [style*="background-color:rgb(0,0,0)"],
+  [aria-modal="true"][role="dialog"]:has([data-testid^="tweetTextarea_0"])
+    [style*="background-color: rgb(0, 0, 0)"],
+  [aria-modal="true"][role="dialog"]:has([data-testid^="tweetTextarea_0"])
+    [style*="background-color:rgb(22,24,28)"],
+  [aria-modal="true"][role="dialog"]:has([data-testid^="tweetTextarea_0"])
+    [style*="background-color: rgb(22, 24, 28)"] {
+    background-color: var(--nord0) !important;
   }
 
   /* Tabs/indicadores. */
@@ -409,17 +615,173 @@
     background-color: var(--nord8) !important;
   }
 
+  /* Composer final: basado en x/post.html + patrón Catppuccin: modal por textarea. */
+  body:has([data-testid="tweetTextarea_0"]) [data-testid="mask"] {
+    background: rgba(46, 52, 64, 0.18) !important;
+    backdrop-filter: none !important;
+  }
+
+  [aria-modal="true"][role="dialog"]:has([data-testid="tweetTextarea_0"]),
+  [aria-labelledby="modal-header"]:has([data-testid="tweetTextarea_0"]),
+  [data-viewportview="true"]:has([data-testid="tweetTextarea_0"]) {
+    background: var(--nord1) !important;
+    color: var(--nord6) !important;
+    border: 1px solid rgba(236, 239, 244, 0.16) !important;
+    border-radius: 20px !important;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45) !important;
+    overflow: hidden !important;
+  }
+
+  [aria-modal="true"][role="dialog"]:has([data-testid="tweetTextarea_0"]) div,
+  [aria-labelledby="modal-header"]:has([data-testid="tweetTextarea_0"]) div,
+  [data-viewportview="true"]:has([data-testid="tweetTextarea_0"]) div {
+    border-color: rgba(236, 239, 244, 0.12) !important;
+  }
+
+  [aria-modal="true"][role="dialog"]:has([data-testid="tweetTextarea_0"])
+    [data-testid="tweetTextarea_0_label"],
+  [aria-labelledby="modal-header"]:has([data-testid="tweetTextarea_0"])
+    [data-testid="tweetTextarea_0_label"],
+  [data-viewportview="true"]:has([data-testid="tweetTextarea_0"])
+    [data-testid="tweetTextarea_0_label"] {
+    background: transparent !important;
+  }
+
+  [aria-modal="true"][role="dialog"]:has([data-testid="tweetTextarea_0"])
+    [data-testid="tweetTextarea_0RichTextInputContainer"],
+  [aria-labelledby="modal-header"]:has([data-testid="tweetTextarea_0"])
+    [data-testid="tweetTextarea_0RichTextInputContainer"],
+  [data-viewportview="true"]:has([data-testid="tweetTextarea_0"])
+    [data-testid="tweetTextarea_0RichTextInputContainer"] {
+    background: transparent !important;
+    color: var(--nord6) !important;
+    min-height: 120px !important;
+  }
+
+  [aria-modal="true"][role="dialog"]:has([data-testid="tweetTextarea_0"])
+    [data-testid="toolBar"],
+  [aria-labelledby="modal-header"]:has([data-testid="tweetTextarea_0"])
+    [data-testid="toolBar"],
+  [data-viewportview="true"]:has([data-testid="tweetTextarea_0"])
+    [data-testid="toolBar"] {
+    background: var(--nord1) !important;
+    border-top: 1px solid rgba(236, 239, 244, 0.12) !important;
+    padding: 10px 0 0 !important;
+  }
+
+  [aria-modal="true"][role="dialog"]:has([data-testid="tweetTextarea_0"])
+    :is(button, [role="button"]),
+  [aria-labelledby="modal-header"]:has([data-testid="tweetTextarea_0"])
+    :is(button, [role="button"]),
+  [data-viewportview="true"]:has([data-testid="tweetTextarea_0"])
+    :is(button, [role="button"]) {
+    border-color: transparent !important;
+  }
+
+  [aria-modal="true"][role="dialog"]:has([data-testid="tweetTextarea_0"])
+    :is(button, [role="button"]):not([data-testid="tweetButton"]):hover,
+  [aria-labelledby="modal-header"]:has([data-testid="tweetTextarea_0"])
+    :is(button, [role="button"]):not([data-testid="tweetButton"]):hover,
+  [data-viewportview="true"]:has([data-testid="tweetTextarea_0"])
+    :is(button, [role="button"]):not([data-testid="tweetButton"]):hover {
+    background-color: rgba(136, 192, 208, 0.12) !important;
+  }
+
+  [aria-modal="true"][role="dialog"]:has([data-testid="tweetTextarea_0"])
+    :is([data-testid="tweetButton"], [data-testid="tweetButtonInline"]),
+  [aria-labelledby="modal-header"]:has([data-testid="tweetTextarea_0"])
+    :is([data-testid="tweetButton"], [data-testid="tweetButtonInline"]),
+  [data-viewportview="true"]:has([data-testid="tweetTextarea_0"])
+    :is([data-testid="tweetButton"], [data-testid="tweetButtonInline"]) {
+    background-color: var(--nord8) !important;
+    color: var(--nord0) !important;
+  }
+
+  [aria-modal="true"][role="dialog"]:has([data-testid="tweetTextarea_0"])
+    :is(
+      [data-testid="tweetButton"],
+      [data-testid="tweetButtonInline"]
+    ):disabled,
+  [aria-labelledby="modal-header"]:has([data-testid="tweetTextarea_0"])
+    :is(
+      [data-testid="tweetButton"],
+      [data-testid="tweetButtonInline"]
+    ):disabled,
+  [data-viewportview="true"]:has([data-testid="tweetTextarea_0"])
+    :is(
+      [data-testid="tweetButton"],
+      [data-testid="tweetButtonInline"]
+    ):disabled {
+    background-color: var(--nord3) !important;
+    opacity: 0.75 !important;
+  }
+
+  /* Screenshot fix: X deja franjas negras y un borde feo alrededor del editor. */
+  [aria-modal="true"][role="dialog"]:has([data-testid="tweetTextarea_0"])
+  :is(div, section, nav),
+  [aria-labelledby="modal-header"]:has([data-testid="tweetTextarea_0"])
+    :is(div, section, nav),
+  [data-viewportview="true"]:has([data-testid="tweetTextarea_0"])
+    :is(div, section, nav) {
+    background-color: transparent !important;
+  }
+
+  [aria-modal="true"][role="dialog"]:has([data-testid="tweetTextarea_0"]),
+  [aria-labelledby="modal-header"]:has([data-testid="tweetTextarea_0"]),
+  [data-viewportview="true"]:has([data-testid="tweetTextarea_0"]) {
+    background-color: var(--nord1) !important;
+  }
+
+  [aria-modal="true"][role="dialog"]:has([data-testid="tweetTextarea_0"])
+    :is(
+      [data-testid="tweetTextarea_0_label"],
+      [data-testid="tweetTextarea_0RichTextInputContainer"],
+      .DraftEditor-root,
+      .DraftEditor-editorContainer,
+      .public-DraftEditor-content
+    ),
+  [aria-labelledby="modal-header"]:has([data-testid="tweetTextarea_0"])
+    :is(
+      [data-testid="tweetTextarea_0_label"],
+      [data-testid="tweetTextarea_0RichTextInputContainer"],
+      .DraftEditor-root,
+      .DraftEditor-editorContainer,
+      .public-DraftEditor-content
+    ),
+  [data-viewportview="true"]:has([data-testid="tweetTextarea_0"])
+    :is(
+      [data-testid="tweetTextarea_0_label"],
+      [data-testid="tweetTextarea_0RichTextInputContainer"],
+      .DraftEditor-root,
+      .DraftEditor-editorContainer,
+      .public-DraftEditor-content
+    ) {
+    border: 0 !important;
+    box-shadow: none !important;
+    outline: 0 !important;
+  }
+
+  [aria-modal="true"][role="dialog"]:has([data-testid="tweetTextarea_0"])
+    [data-testid="toolBar"],
+  [aria-labelledby="modal-header"]:has([data-testid="tweetTextarea_0"])
+    [data-testid="toolBar"],
+  [data-viewportview="true"]:has([data-testid="tweetTextarea_0"])
+    [data-testid="toolBar"] {
+    background-color: rgba(67, 76, 94, 0.55) !important;
+    border-top: 1px solid rgba(236, 239, 244, 0.12) !important;
+  }
+
   ::selection {
-    background: rgba(136, 192, 208, .35) !important;
+    background: rgba(136, 192, 208, 0.35) !important;
     color: var(--nord6) !important;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: rgba(216, 222, 233, .22) !important;
+    background: rgba(216, 222, 233, 0.22) !important;
     border-radius: 999px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: rgba(216, 222, 233, .36) !important;
+    background: rgba(216, 222, 233, 0.36) !important;
   }
 }

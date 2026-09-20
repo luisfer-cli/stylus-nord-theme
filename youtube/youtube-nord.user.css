@@ -38,19 +38,19 @@
     --yt-spec-raised-background: var(--nord1) !important;
     --yt-spec-menu-background: var(--nord1) !important;
     --yt-spec-inverted-background: var(--nord6) !important;
-    --yt-spec-additive-background: rgba(236, 239, 244, .10) !important;
-    --yt-spec-outline: rgba(236, 239, 244, .14) !important;
-    --yt-spec-outline-inverse: rgba(46, 52, 64, .20) !important;
+    --yt-spec-additive-background: rgba(236, 239, 244, 0.1) !important;
+    --yt-spec-outline: rgba(236, 239, 244, 0.14) !important;
+    --yt-spec-outline-inverse: rgba(46, 52, 64, 0.2) !important;
     --yt-spec-text-primary: var(--nord6) !important;
-    --yt-spec-text-secondary: rgba(216, 222, 233, .72) !important;
-    --yt-spec-text-disabled: rgba(216, 222, 233, .42) !important;
+    --yt-spec-text-secondary: rgba(216, 222, 233, 0.72) !important;
+    --yt-spec-text-disabled: rgba(216, 222, 233, 0.42) !important;
     --yt-spec-icon-active-other: var(--nord6) !important;
     --yt-spec-icon-inactive: var(--nord4) !important;
     --yt-spec-call-to-action: var(--nord8) !important;
-    --yt-spec-suggested-action: rgba(136, 192, 208, .16) !important;
+    --yt-spec-suggested-action: rgba(136, 192, 208, 0.16) !important;
     --yt-spec-badge-chip-background: var(--nord2) !important;
     --yt-spec-button-chip-background-hover: var(--nord2) !important;
-    --yt-spec-touch-response: rgba(236, 239, 244, .12) !important;
+    --yt-spec-touch-response: rgba(236, 239, 244, 0.12) !important;
     --yt-spec-filled-button-text: var(--nord0) !important;
     --yt-spec-static-brand-red: var(--nord11) !important;
     --yt-spec-themed-blue: var(--nord8) !important;
@@ -65,9 +65,9 @@
     --paper-menu-background-color: var(--nord1) !important;
     --paper-menu-button-dropdown-background: var(--nord1) !important;
     --primary-text-color: var(--nord6) !important;
-    --secondary-text-color: rgba(216, 222, 233, .72) !important;
-    --disabled-text-color: rgba(216, 222, 233, .42) !important;
-    --divider-color: rgba(236, 239, 244, .14) !important;
+    --secondary-text-color: rgba(216, 222, 233, 0.72) !important;
+    --disabled-text-color: rgba(216, 222, 233, 0.42) !important;
+    --divider-color: rgba(236, 239, 244, 0.14) !important;
     --accent-color: var(--nord8) !important;
     --paper-spinner-color: var(--nord8) !important;
   }
@@ -97,11 +97,11 @@
   ytd-playlist-panel-renderer {
     background: var(--nord1) !important;
     color: var(--nord6) !important;
-    border-color: rgba(236, 239, 244, .14) !important;
+    border-color: rgba(236, 239, 244, 0.14) !important;
   }
 
   ytd-masthead {
-    box-shadow: 0 1px 0 rgba(236, 239, 244, .10) !important;
+    box-shadow: 0 1px 0 rgba(236, 239, 244, 0.1) !important;
   }
 
   /* Search: only color the inner capsule, not the whole host. */
@@ -116,7 +116,7 @@
   .ytSearchboxComponentInputBoxDark,
   #container.ytd-searchbox {
     background: #252a33 !important;
-    border-color: rgba(236, 239, 244, .18) !important;
+    border-color: rgba(236, 239, 244, 0.18) !important;
     box-shadow: none !important;
   }
 
@@ -133,7 +133,7 @@
   button[aria-label="Buscar"],
   button[aria-label="Search"] {
     background: var(--nord1) !important;
-    border-color: rgba(236, 239, 244, .18) !important;
+    border-color: rgba(236, 239, 244, 0.18) !important;
     color: var(--nord6) !important;
   }
 
@@ -144,7 +144,7 @@
 
   input::placeholder,
   yt-searchbox [contenteditable="true"]:empty::before {
-    color: rgba(216, 222, 233, .58) !important;
+    color: rgba(216, 222, 233, 0.58) !important;
   }
 
   /* Text and links. */
@@ -167,7 +167,7 @@
   yt-content-metadata-view-model,
   .yt-content-metadata-view-model-wiz__metadata-text,
   .yt-core-attributed-string--link-inherit-color {
-    color: rgba(216, 222, 233, .72) !important;
+    color: rgba(216, 222, 233, 0.72) !important;
   }
 
   a,
@@ -195,7 +195,7 @@
   yt-button-shape button {
     background-color: var(--nord2) !important;
     color: var(--nord6) !important;
-    border-color: rgba(236, 239, 244, .12) !important;
+    border-color: rgba(236, 239, 244, 0.12) !important;
   }
 
   yt-chip-cloud-chip-renderer[chip-style="STYLE_DEFAULT"],
@@ -297,7 +297,7 @@
     --yt-saturated-base-background: var(--nord0) !important;
     --yt-saturated-raised-background: var(--nord1) !important;
     --yt-saturated-text-primary: var(--nord6) !important;
-    --yt-saturated-text-secondary: rgba(216, 222, 233, .72) !important;
+    --yt-saturated-text-secondary: rgba(216, 222, 233, 0.72) !important;
   }
 
   ytd-watch-metadata,
@@ -315,7 +315,7 @@
   ytd-rich-item-renderer {
     background-color: var(--nord0) !important;
     color: var(--nord6) !important;
-    border-color: rgba(236, 239, 244, .12) !important;
+    border-color: rgba(236, 239, 244, 0.12) !important;
   }
 
   #description,
@@ -330,7 +330,7 @@
   yt-badge-view-model,
   yt-thumbnail-badge-view-model,
   yt-thumbnail-overlay-badge-view-model {
-    background-color: rgba(46, 52, 64, .86) !important;
+    background-color: rgba(46, 52, 64, 0.86) !important;
     color: var(--nord5) !important;
   }
 
@@ -368,7 +368,7 @@
   .ytp-popup,
   .ytp-panel,
   .ytp-settings-menu {
-    background-color: rgba(59, 66, 82, .96) !important;
+    background-color: rgba(59, 66, 82, 0.96) !important;
     color: var(--nord6) !important;
   }
 
@@ -378,7 +378,7 @@
   ytd-simple-menu-header-renderer h2 {
     background: var(--nord1) !important;
     color: var(--nord6) !important;
-    border-color: rgba(236, 239, 244, .14) !important;
+    border-color: rgba(236, 239, 244, 0.14) !important;
   }
 
   ytd-simple-menu-header-renderer a,
@@ -393,7 +393,7 @@
 
   ytd-simple-menu-header-renderer a:hover,
   ytd-simple-menu-header-renderer button:hover {
-    background: rgba(236, 239, 244, .10) !important;
+    background: rgba(236, 239, 244, 0.1) !important;
   }
 
   /* Forms, tooltips, and menus. */
@@ -405,7 +405,7 @@
   yt-tooltip {
     background-color: var(--nord1) !important;
     color: var(--nord6) !important;
-    border-color: rgba(236, 239, 244, .14) !important;
+    border-color: rgba(236, 239, 244, 0.14) !important;
   }
 
   [role="tooltip"],
@@ -414,21 +414,21 @@
   .ytPopoverComponentHost {
     background-color: var(--nord1) !important;
     color: var(--nord6) !important;
-    border-color: rgba(236, 239, 244, .14) !important;
-    box-shadow: 0 14px 42px rgba(0, 0, 0, .38) !important;
+    border-color: rgba(236, 239, 244, 0.14) !important;
+    box-shadow: 0 14px 42px rgba(0, 0, 0, 0.38) !important;
   }
 
   ::selection {
-    background: rgba(136, 192, 208, .35) !important;
+    background: rgba(136, 192, 208, 0.35) !important;
     color: var(--nord6) !important;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: rgba(216, 222, 233, .22) !important;
+    background: rgba(216, 222, 233, 0.22) !important;
     border-radius: 999px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: rgba(216, 222, 233, .36) !important;
+    background: rgba(216, 222, 233, 0.36) !important;
   }
 }

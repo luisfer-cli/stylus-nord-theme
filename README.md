@@ -6,7 +6,9 @@ User styles for [Stylus](https://github.com/openstyles/stylus) using the [Nord](
 
 - [ChatGPT Nord](chatgpt/chatgpt-nord.user.css)
 - [GitHub Nord](github/github-nord.user.css)
+- [Gmail Nord](gmail/gmail-nord.user.css)
 - [JKAnime Nord](jkanime/jkanime-nord.user.css)
+- [LinkedIn Nord](linkedin/linkedin-nord.user.css)
 - [X Nord](x/x-nord.user.css)
 - [YouTube Nord](youtube/youtube-nord.user.css)
 

@@ -1,0 +1,610 @@
+/* ==UserStyle==
+@name         Gmail Nord
+@namespace    local.gmail.nord
+@version      1.0.5
+@description  Conservative Nord theme for Gmail
+@author       pi
+@match        https://mail.google.com/*
+==/UserStyle== */
+
+@-moz-document domain("mail.google.com") {
+  :root,
+  html,
+  body,
+  .aAX {
+    color-scheme: dark !important;
+
+    --nord0: #2e3440;
+    --nord1: #3b4252;
+    --nord2: #434c5e;
+    --nord3: #4c566a;
+    --nord4: #d8dee9;
+    --nord5: #e5e9f0;
+    --nord6: #eceff4;
+    --nord7: #8fbcbb;
+    --nord8: #88c0d0;
+    --nord9: #81a1c1;
+    --nord10: #5e81ac;
+    --nord11: #bf616a;
+    --nord13: #ebcb8b;
+    --nord14: #a3be8c;
+    --nord15: #b48ead;
+
+    /* Gmail / Material 3 tokens. */
+    --gm3-sys-color-background: var(--nord0) !important;
+    --gm3-sys-color-surface: var(--nord1) !important;
+    --gm3-sys-color-surface-container: var(--nord1) !important;
+    --gm3-sys-color-surface-container-high: var(--nord2) !important;
+    --gm3-sys-color-surface-container-highest: var(--nord2) !important;
+    --gm3-sys-color-on-background: var(--nord6) !important;
+    --gm3-sys-color-on-surface: var(--nord6) !important;
+    --gm3-sys-color-on-surface-variant: var(--nord4) !important;
+    --gm3-sys-color-primary: var(--nord8) !important;
+    --gm3-sys-color-on-primary: var(--nord0) !important;
+    --gm3-sys-color-primary-container: var(--nord10) !important;
+    --gm3-sys-color-secondary: var(--nord9) !important;
+    --gm3-sys-color-outline: rgba(236, 239, 244, 0.18) !important;
+    --gm3-sys-color-outline-variant: rgba(236, 239, 244, 0.12) !important;
+  }
+
+  html,
+  body,
+  #loading,
+  .nH,
+  .bkK,
+  .aeF,
+  .aeG,
+  .aeH,
+  .aeJ,
+  .AO,
+  .Tm,
+  .Cp,
+  .aia,
+  .a3s,
+  [role="main"] {
+    background-color: var(--nord0) !important;
+    color: var(--nord6) !important;
+  }
+
+  a,
+  a:visited,
+  .ams,
+  .J-Ke,
+  .n0 {
+    color: var(--nord8) !important;
+  }
+
+  a:hover,
+  .J-Ke:hover,
+  .n0:hover {
+    color: var(--nord7) !important;
+  }
+
+  /* Top bar / search. */
+  .gb_Jb,
+  .gb_Ra,
+  .gb_K,
+  .gb_Zd,
+  form[role="search"],
+  .gb_Pd,
+  .aJf,
+  .aeN,
+  .WR,
+  .bAw,
+  .G-atb,
+  .aqK,
+  .aqL {
+    background-color: var(--nord1) !important;
+    color: var(--nord6) !important;
+    border-color: rgba(236, 239, 244, 0.14) !important;
+  }
+
+  input,
+  textarea,
+  select,
+  .gb_nf,
+  .gb_ef,
+  .nr,
+  .Am,
+  .Ak,
+  .editable {
+    background-color: var(--nord2) !important;
+    color: var(--nord6) !important;
+    border-color: rgba(236, 239, 244, 0.16) !important;
+    caret-color: var(--nord8) !important;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: rgba(216, 222, 233, 0.62) !important;
+  }
+
+  /* Sidebar. */
+  .z0 .T-I,
+  .T-I-KE {
+    background-color: var(--nord8) !important;
+    color: var(--nord0) !important;
+    border-color: transparent !important;
+  }
+
+  .TK,
+  .TO,
+  .TN,
+  .aio,
+  .aim,
+  .nU,
+  .aHS-bnt,
+  .aHS-bu1,
+  .aHS-bnw,
+  .aHS-bnu {
+    background-color: transparent !important;
+    color: var(--nord5) !important;
+  }
+
+  .TO:hover,
+  .TN:hover,
+  .aim:hover,
+  .aio:hover,
+  .CL:hover,
+  .G-Ni .T-I:hover {
+    background-color: rgba(236, 239, 244, 0.1) !important;
+  }
+
+  .ain .TO,
+  .TO.NQ,
+  .TO.NQ .nU,
+  .TO.NQ .n0,
+  .TN.aHS-bnt,
+  .TN.aHS-bnt .n0 {
+    background-color: rgba(136, 192, 208, 0.16) !important;
+    color: var(--nord8) !important;
+  }
+
+  /* Toolbar/buttons/menus. */
+  .T-I,
+  .J-J5-Ji,
+  .J-N,
+  .J-M,
+  .J-Kh,
+  .b8,
+  .vh,
+  .aZ6,
+  .aiv {
+    background-color: transparent !important;
+    color: var(--nord5) !important;
+    border-color: rgba(236, 239, 244, 0.14) !important;
+    box-shadow: none !important;
+  }
+
+  .T-I:hover,
+  .J-N:hover,
+  .J-M-JJ:hover,
+  .J-Kh:hover {
+    background-color: rgba(236, 239, 244, 0.1) !important;
+    color: var(--nord6) !important;
+  }
+
+  /* Message list. */
+  .F,
+  .cf,
+  .zt,
+  .UI,
+  .UI table,
+  .zA,
+  .xY,
+  .yX,
+  .xW,
+  .apU,
+  .PF {
+    background-color: var(--nord0) !important;
+    color: var(--nord5) !important;
+    border-color: rgba(236, 239, 244, 0.1) !important;
+  }
+
+  tr.zA,
+  tr.zA.yO {
+    background-color: var(--nord1) !important;
+    color: var(--nord5) !important;
+    box-shadow: inset 0 -1px 0 rgba(236, 239, 244, 0.08) !important;
+  }
+
+  tr.zA.zE,
+  tr.zA.zE .yW,
+  tr.zA.zE .bog,
+  tr.zA.zE .bqe,
+  tr.zA.zE .xY {
+    background-color: var(--nord2) !important;
+    color: var(--nord6) !important;
+    font-weight: 600 !important;
+  }
+
+  tr.zA:hover,
+  tr.zA.yO:hover,
+  tr.zA.zE:hover {
+    background-color: var(--nord2) !important;
+    box-shadow: inset 3px 0 0 var(--nord8) !important;
+  }
+
+  .yW,
+  .bog,
+  .bqe,
+  .xS,
+  .y2,
+  .xT,
+  .y6,
+  .yP,
+  .zF,
+  .bA4,
+  .bq3 {
+    color: var(--nord6) !important;
+  }
+
+  .y2,
+  .yP,
+  .xT,
+  .bq3,
+  .gD,
+  .g3,
+  .hb,
+  .hi {
+    color: rgba(216, 222, 233, 0.68) !important;
+  }
+
+  .aXw,
+  .T-KT,
+  .T-Jo,
+  .asa,
+  .asf,
+  .ar9,
+  .ar8,
+  .ar6,
+  .bsU {
+    color: var(--nord5) !important;
+    filter: invert(0.85) hue-rotate(160deg) saturate(0.7) !important;
+  }
+
+  /* Reading pane / conversation. */
+  .adn,
+  .gs,
+  .ii,
+  .gt,
+  .a3s,
+  .gE,
+  .ha,
+  .h7,
+  .Bk,
+  .G3,
+  .HO,
+  .nH.if {
+    background-color: var(--nord1) !important;
+    color: var(--nord6) !important;
+    border-color: rgba(236, 239, 244, 0.12) !important;
+  }
+
+  .hP,
+  .bog,
+  .ha h2,
+  .a3s p,
+  .a3s div,
+  .a3s span {
+    color: var(--nord6) !important;
+  }
+
+  blockquote,
+  .gmail_quote {
+    border-color: rgba(136, 192, 208, 0.35) !important;
+    color: var(--nord4) !important;
+  }
+
+  /* Compose. */
+  .nH.Hd,
+  .AD,
+  .M9,
+  .aoI,
+  .aoP,
+  .aoT,
+  .aoD,
+  .Ar,
+  .Am.Al,
+  .Ap,
+  .aDh,
+  .HM .I5 {
+    background-color: var(--nord1) !important;
+    color: var(--nord6) !important;
+    border-color: rgba(236, 239, 244, 0.14) !important;
+  }
+
+  .aoT,
+  .aoD,
+  .aoP .Ar {
+    background-color: var(--nord2) !important;
+  }
+
+  .dC .T-I,
+  .gU.Up .T-I {
+    background-color: var(--nord8) !important;
+    color: var(--nord0) !important;
+    border-color: transparent !important;
+  }
+
+  /* Generic inline hard-coded colors. */
+  [style*="background-color: rgb(255, 255, 255)"],
+  [style*="background-color:#fff"],
+  [style*="background: rgb(255, 255, 255)"],
+  [style*="background:#fff"] {
+    background-color: var(--nord1) !important;
+  }
+
+  [style*="background-color: rgb(241, 243, 244)"],
+  [style*="background-color: rgb(232, 240, 254)"],
+  [style*="background: rgb(241, 243, 244)"] {
+    background-color: var(--nord2) !important;
+  }
+
+  [style*="color: rgb(32, 33, 36)"],
+  [style*="color:#202124"],
+  [style*="color: #202124"],
+  [style*="color: rgb(60, 64, 67)"] {
+    color: var(--nord6) !important;
+  }
+
+  [style*="color: rgb(95, 99, 104)"],
+  [style*="color:#5f6368"],
+  [style*="color: #5f6368"] {
+    color: rgba(216, 222, 233, 0.68) !important;
+  }
+
+  /* Mail rows: menos bloque sólido, más jerarquía sender / asunto / snippet. */
+  .Cp,
+  .UI,
+  .UI table,
+  tbody {
+    background-color: var(--nord0) !important;
+  }
+
+  tr.zA,
+  tr.zA.yO,
+  tr.zA.yO td.xY {
+    background-color: transparent !important;
+  }
+
+  tr.zA td.xY {
+    border-bottom: 1px solid rgba(236, 239, 244, 0.08) !important;
+    transition:
+      background-color 120ms ease,
+      box-shadow 120ms ease;
+  }
+
+  tr.zA:hover td.xY {
+    background-color: rgba(67, 76, 94, 0.62) !important;
+    box-shadow: inset 3px 0 0 var(--nord8) !important;
+  }
+
+  tr.zA.zE td.xY {
+    background-color: rgba(67, 76, 94, 0.38) !important;
+  }
+
+  tr.zA .yW,
+  tr.zA .zF {
+    color: var(--nord5) !important;
+    font-weight: 600 !important;
+  }
+
+  tr.zA .bog,
+  tr.zA .y6 {
+    color: var(--nord6) !important;
+  }
+
+  tr.zA .y2,
+  tr.zA .xT,
+  tr.zA .yP,
+  tr.zA .bq3,
+  tr.zA .xW {
+    color: rgba(216, 222, 233, 0.6) !important;
+    font-weight: 400 !important;
+  }
+
+  tr.zA.zE .yW,
+  tr.zA.zE .zF,
+  tr.zA.zE .bog,
+  tr.zA.zE .y6 {
+    color: var(--nord6) !important;
+  }
+
+  /* Modales, popovers y alerts. */
+  .J-M,
+  .J-N,
+  .Kj-JD,
+  .b8 .vh,
+  .aiv,
+  .aZ6,
+  .bAp,
+  .nH.Hd,
+  .AD,
+  .M9 {
+    background-color: var(--nord1) !important;
+    color: var(--nord6) !important;
+    border: 1px solid rgba(236, 239, 244, 0.14) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.42) !important;
+  }
+
+  .J-N:hover,
+  .J-N-JT:hover,
+  .J-M-JJ:hover,
+  .Kj-JD button:hover,
+  .b8 .a8k:hover {
+    background-color: rgba(136, 192, 208, 0.12) !important;
+    color: var(--nord7) !important;
+  }
+
+  .Kj-JD-Jz,
+  .Kj-JD-Jl,
+  .bAq,
+  .bAo {
+    color: var(--nord6) !important;
+  }
+
+  .Kj-JD-Jz,
+  .AD .Hp,
+  .M9 .aoT {
+    background-color: var(--nord2) !important;
+    border-color: rgba(236, 239, 244, 0.14) !important;
+  }
+
+  /* Final polish: nav pill + mail hover, sin pintar doble. */
+  .aeN .TO,
+  .aeN .TN,
+  .aeN .aio,
+  .aeN .aim,
+  .aeN .nU {
+    background-color: transparent !important;
+  }
+
+  .aeN .TO .TN {
+    border-radius: 0 999px 999px 0 !important;
+    margin-right: 8px !important;
+    transition:
+      background-color 120ms ease,
+      color 120ms ease;
+  }
+
+  .aeN .TO:hover,
+  .aeN .TO:hover .TN,
+  .aeN .TN:hover {
+    background-color: rgba(236, 239, 244, 0.08) !important;
+  }
+
+  .aeN .TO.aBP .TN,
+  .aeN .TO.nZ .TN,
+  .aeN .TO.aiq .TN {
+    background-color: rgba(136, 192, 208, 0.18) !important;
+  }
+
+  .aeN .TO .n0,
+  .aeN .TN .n0,
+  .aeN .nU {
+    color: var(--nord5) !important;
+  }
+
+  .aeN .TO.aBP .n0,
+  .aeN .TO.nZ .n0,
+  .aeN .TO.aiq .n0 {
+    color: var(--nord8) !important;
+    font-weight: 700 !important;
+  }
+
+  tr.zA,
+  tr.zA.yO,
+  tr.zA.zE {
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+
+  tr.zA > td.xY {
+    background-color: rgba(59, 66, 82, 0.34) !important;
+    border-bottom: 1px solid rgba(236, 239, 244, 0.07) !important;
+    box-shadow: none !important;
+  }
+
+  tr.zA.zE > td.xY {
+    background-color: rgba(67, 76, 94, 0.48) !important;
+  }
+
+  tr.zA:hover > td.xY {
+    background-color: rgba(76, 86, 106, 0.58) !important;
+    box-shadow: none !important;
+  }
+
+  tr.zA:hover > td.xY:first-child {
+    box-shadow: inset 3px 0 0 var(--nord8) !important;
+  }
+
+  tr.zA .yW,
+  tr.zA .zF {
+    color: var(--nord5) !important;
+  }
+
+  tr.zA .bog,
+  tr.zA .y6 {
+    color: var(--nord6) !important;
+    font-weight: 500 !important;
+  }
+
+  tr.zA .y2,
+  tr.zA .xT,
+  tr.zA .xW {
+    color: rgba(216, 222, 233, 0.58) !important;
+  }
+
+  /* Navegación/etiquetas: sin bordes ni sombras raras. */
+  .aeN,
+  .aeN *,
+  .TK,
+  .TK *,
+  .TO,
+  .TO *,
+  .TN,
+  .TN *,
+  .aim,
+  .aim *,
+  .aio,
+  .aio *,
+  .nL,
+  .nL *,
+  .CL,
+  .CL * {
+    border-color: transparent !important;
+    box-shadow: none !important;
+  }
+
+  /* Search bar: solo colores, conserva la forma original de Gmail. */
+  form[role="search"].gb_Pd,
+  form[role="search"] .gb_Le {
+    background-color: var(--nord2) !important;
+    color: var(--nord6) !important;
+  }
+
+  form[role="search"].gb_Pd:focus-within,
+  form[role="search"].gb_Pd:hover {
+    background-color: var(--nord1) !important;
+  }
+
+  form[role="search"] input.gb_Je,
+  form[role="search"] input[role="combobox"] {
+    background-color: transparent !important;
+    color: var(--nord6) !important;
+  }
+
+  form[role="search"] input.gb_Je::placeholder,
+  form[role="search"] input[role="combobox"]::placeholder {
+    color: rgba(216, 222, 233, 0.58) !important;
+  }
+
+  form[role="search"] :is(button, .gb_4e, .gb_1e, .gb_0e, .gb_Xe),
+  form[role="search"] svg,
+  form[role="search"] path {
+    color: var(--nord5) !important;
+    fill: currentColor !important;
+  }
+
+  form[role="search"] :is(button, .gb_4e, .gb_1e, .gb_0e, .gb_Xe):hover,
+  form[role="search"] :is(button, .gb_4e, .gb_1e, .gb_0e, .gb_Xe):hover svg,
+  form[role="search"] :is(button, .gb_4e, .gb_1e, .gb_0e, .gb_Xe):hover path {
+    color: var(--nord8) !important;
+  }
+
+  ::selection {
+    background: rgba(136, 192, 208, 0.35) !important;
+    color: var(--nord6) !important;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(216, 222, 233, 0.22) !important;
+    border-radius: 999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(216, 222, 233, 0.36) !important;
+  }
+}

@@ -49,8 +49,8 @@
   .footer {
     background: var(--nord1) !important;
     color: var(--nord6) !important;
-    border-color: rgba(236, 239, 244, .14) !important;
-    box-shadow: 0 1px 0 rgba(236, 239, 244, .10) !important;
+    border-color: rgba(236, 239, 244, 0.14) !important;
+    box-shadow: 0 1px 0 rgba(236, 239, 244, 0.1) !important;
   }
 
   .mobile-bottom-nav__item,
@@ -105,7 +105,7 @@
   #search_results {
     background: var(--nord1) !important;
     color: var(--nord6) !important;
-    border-color: rgba(236, 239, 244, .14) !important;
+    border-color: rgba(236, 239, 244, 0.14) !important;
   }
 
   .buscanime,
@@ -115,12 +115,12 @@
   textarea {
     background: #252a33 !important;
     color: var(--nord6) !important;
-    border-color: rgba(236, 239, 244, .18) !important;
+    border-color: rgba(236, 239, 244, 0.18) !important;
   }
 
   input::placeholder,
   textarea::placeholder {
-    color: rgba(216, 222, 233, .58) !important;
+    color: rgba(216, 222, 233, 0.58) !important;
   }
 
   button.buton-form,
@@ -130,7 +130,7 @@
 
   .searchbg,
   .screen-overlay {
-    background: rgba(46, 52, 64, .82) !important;
+    background: rgba(46, 52, 64, 0.82) !important;
   }
 
   /* Player y cajas. */
@@ -150,7 +150,7 @@
   }
 
   .pbox {
-    background: rgba(46, 52, 64, .70) !important;
+    background: rgba(46, 52, 64, 0.7) !important;
   }
 
   .video-info,
@@ -163,7 +163,7 @@
   #jk_thread {
     background: var(--nord1) !important;
     color: var(--nord6) !important;
-    border-color: rgba(236, 239, 244, .14) !important;
+    border-color: rgba(236, 239, 244, 0.14) !important;
   }
 
   /* Servidores, botones y selects bonitos. */
@@ -178,7 +178,7 @@
   .nice-select .option {
     background: var(--nord2) !important;
     color: var(--nord6) !important;
-    border-color: rgba(236, 239, 244, .16) !important;
+    border-color: rgba(236, 239, 244, 0.16) !important;
   }
 
   .btn:hover,
@@ -215,7 +215,7 @@
   .list-group-item {
     background: var(--nord1) !important;
     color: var(--nord6) !important;
-    border-color: rgba(236, 239, 244, .12) !important;
+    border-color: rgba(236, 239, 244, 0.12) !important;
   }
 
   .list-group-item:hover {
@@ -223,7 +223,7 @@
   }
 
   .list-group-item.current {
-    background: rgba(136, 192, 208, .18) !important;
+    background: rgba(136, 192, 208, 0.18) !important;
     border-left: 4px solid var(--nord8) !important;
   }
 
@@ -235,7 +235,7 @@
   .rounded-start,
   .img-rounded {
     background-color: var(--nord1) !important;
-    border-color: rgba(236, 239, 244, .12) !important;
+    border-color: rgba(236, 239, 244, 0.12) !important;
   }
 
   .badge,
@@ -279,20 +279,20 @@
   ins {
     background: var(--nord1) !important;
     color: var(--nord6) !important;
-    border-color: rgba(236, 239, 244, .14) !important;
+    border-color: rgba(236, 239, 244, 0.14) !important;
   }
 
   ::selection {
-    background: rgba(136, 192, 208, .35) !important;
+    background: rgba(136, 192, 208, 0.35) !important;
     color: var(--nord6) !important;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: rgba(216, 222, 233, .22) !important;
+    background: rgba(216, 222, 233, 0.22) !important;
     border-radius: 999px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: rgba(216, 222, 233, .36) !important;
+    background: rgba(216, 222, 233, 0.36) !important;
   }
 }
