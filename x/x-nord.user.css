@@ -1,0 +1,425 @@
+/* ==UserStyle==
+@name         X Nord
+@namespace    local.x.nord
+@version      1.0.6
+@description  Tema Nord conservador para X/Twitter
+@author       pi
+@match        https://x.com/*
+@match        https://twitter.com/*
+==/UserStyle== */
+
+@-moz-document domain("x.com"), domain("twitter.com") {
+  :root,
+  html[data-theme="dark"],
+  body,
+  body.LightsOut {
+    color-scheme: dark !important;
+
+    /* Tokens usados por userstyles recientes de X/Catppuccin/Dim. */
+    --background: 46 52 64 !important;
+    --border-color: var(--nord2) !important;
+    --color: var(--nord4) !important;
+    --color-emphasis: var(--nord6) !important;
+    --hover-bg-color: rgba(236, 239, 244, .10) !important;
+    --cpft-text-primary: var(--nord6) !important;
+    --primary: 136 192 208 !important;
+    --input: 220 16% 31% !important;
+    --border: 220 16% 31% !important;
+    --color-gray-0: 59 66 82 !important;
+    --color-gray-100: 67 76 94 !important;
+    --color-gray-700: 216 222 233 !important;
+    --color-text: 236 239 244 !important;
+
+    --nord0: #2e3440;
+    --nord1: #3b4252;
+    --nord2: #434c5e;
+    --nord3: #4c566a;
+    --nord4: #d8dee9;
+    --nord5: #e5e9f0;
+    --nord6: #eceff4;
+    --nord7: #8fbcbb;
+    --nord8: #88c0d0;
+    --nord9: #81a1c1;
+    --nord10: #5e81ac;
+    --nord11: #bf616a;
+    --nord12: #d08770;
+    --nord13: #ebcb8b;
+    --nord14: #a3be8c;
+    --nord15: #b48ead;
+  }
+
+  html,
+  body,
+  #react-root,
+  [data-testid="primaryColumn"],
+  [data-testid="sidebarColumn"] {
+    background-color: var(--nord0) !important;
+    color: var(--nord6) !important;
+  }
+
+  /* Texto: X mete colores inline, por eso se re-mapean los rgb originales. */
+  [style*="color:rgb(231,233,234)"],
+  [style*="color: rgb(231, 233, 234)"] {
+    color: var(--nord6) !important;
+  }
+
+  [style*="color:rgb(113,118,123)"],
+  [style*="color: rgb(113, 118, 123)"] {
+    color: rgba(216, 222, 233, .58) !important;
+  }
+
+  [style*="color:rgb(29,155,240)"],
+  [style*="color: rgb(29, 155, 240)"],
+  a[href] {
+    color: var(--nord8) !important;
+  }
+
+  a[href]:hover {
+    color: var(--nord7) !important;
+  }
+
+  svg,
+  [style*="color:rgb(239,243,244)"],
+  [style*="color: rgb(239, 243, 244)"],
+  [style*="color:rgb(255,255,255)"],
+  [style*="color: rgb(255, 255, 255)"] {
+    color: var(--nord5) !important;
+  }
+
+  /* Fondos principales, cards, barras y cajones. */
+  header[role="banner"],
+  nav[role="navigation"],
+  main[role="main"],
+  [data-testid="GrokDrawer"],
+  [data-testid="chat-drawer-root"],
+  [role="region"],
+  [role="article"],
+  .r-kemksi {
+    background-color: var(--nord0) !important;
+  }
+
+  .r-g2wdr4,
+  .r-gu4em3,
+  .r-1bnu78o,
+  .r-z32n2g,
+  .r-1m3jxhj,
+  .r-1otebnk {
+    background-color: var(--nord1) !important;
+  }
+
+  .r-5zmot {
+    background-color: rgba(46, 52, 64, .78) !important;
+  }
+
+  [style*="background-color:rgb(0,0,0)"],
+  [style*="background-color: rgb(0, 0, 0)"],
+  [style*="background-color:rgb(22,24,28)"],
+  [style*="background-color: rgb(22, 24, 28)"] {
+    background-color: var(--nord0) !important;
+  }
+
+  [style*="background-color:rgb(32,35,39)"],
+  [style*="background-color: rgb(32, 35, 39)"],
+  [style*="background-color:rgb(22,24,28)"],
+  [style*="background-color: rgb(22, 24, 28)"] {
+    background-color: var(--nord1) !important;
+  }
+
+  [style*="background-color:rgba(15,20,25,0.75)"],
+  [style*="background-color: rgba(15, 20, 25, 0.75)"] {
+    background-color: rgba(46, 52, 64, .78) !important;
+  }
+
+  /* Botones claros de X: Postear, Premium, etc. */
+  [style*="background-color:rgb(239,243,244)"],
+  [style*="background-color: rgb(239, 243, 244)"] {
+    background-color: var(--nord8) !important;
+    color: var(--nord0) !important;
+  }
+
+  [style*="background-color:rgb(29,155,240)"],
+  [style*="background-color: rgb(29, 155, 240)"],
+  .r-l5o3uw {
+    background-color: var(--nord10) !important;
+    color: var(--nord6) !important;
+  }
+
+  button[aria-label*="posts nuevos"],
+  button[aria-label*="posts nuevos"] *:not(img) {
+    color: var(--nord6) !important;
+  }
+
+  button[aria-label*="posts nuevos"]:hover {
+    background-color: var(--nord9) !important;
+  }
+
+  nav[role="navigation"] [role="link"]:hover,
+  nav[role="navigation"] [role="button"]:hover,
+  [data-testid="UserCell"]:hover {
+    background-color: rgba(236, 239, 244, .10) !important;
+  }
+
+  [data-testid="SideNav_NewTweet_Button"]:hover,
+  [data-testid="tweetButtonInline"]:hover,
+  [style*="background-color:rgb(239,243,244)"]:hover,
+  [style*="background-color: rgb(239, 243, 244)"]:hover {
+    background-color: var(--nord7) !important;
+  }
+
+  /* Bordes/divisores. */
+  [style*="border-color:rgb(47,51,54)"],
+  [style*="border-color: rgb(47, 51, 54)"],
+  [style*="border-color:rgb(83,100,113)"],
+  [style*="border-color: rgb(83, 100, 113)"] {
+    border-color: rgba(236, 239, 244, .16) !important;
+  }
+
+  [data-testid="primaryColumn"],
+  [data-testid="sidebarColumn"],
+  [aria-label="Cronologías de perfil"],
+  [role="tablist"],
+  [role="article"],
+  .r-1kqtdi0,
+  .r-1roi411,
+  .r-1igl3o0,
+  .r-2sztyj,
+  .r-1aihyag {
+    border-color: rgba(236, 239, 244, .12) !important;
+  }
+
+  /* Fondos de X hechos con clases generadas. */
+  .r-kemksi {
+    background-color: var(--nord0) !important;
+  }
+
+  aside[aria-label="Suscríbete a Premium"],
+  aside[aria-label="A quién seguir"],
+  div:has(> aside[aria-label="Suscríbete a Premium"]),
+  div:has(> aside[aria-label="A quién seguir"]) {
+    background-color: var(--nord1) !important;
+    border-color: rgba(236, 239, 244, .14) !important;
+  }
+
+  aside[aria-label="Suscríbete a Premium"] [role="link"][href*="premium"],
+  aside[aria-label="A quién seguir"] button[aria-label^="Seguir"] {
+    background-color: var(--nord8) !important;
+    color: var(--nord0) !important;
+  }
+
+  aside[aria-label="Suscríbete a Premium"] [role="link"][href*="premium"]:hover,
+  aside[aria-label="A quién seguir"] button[aria-label^="Seguir"]:hover {
+    background-color: var(--nord7) !important;
+  }
+
+  /* Composer / donde se twittea. */
+  div:has([data-testid="tweetTextarea_0"]),
+  div:has(> [data-testid="tweetTextarea_0RichTextInputContainer"]),
+  [data-testid="tweetTextarea_0RichTextInputContainer"],
+  [data-testid="toolBar"] {
+    background-color: var(--nord0) !important;
+    color: var(--nord6) !important;
+  }
+
+  [data-testid="tweetTextarea_0"],
+  .public-DraftEditorPlaceholder-root {
+    color: rgba(216, 222, 233, .70) !important;
+  }
+
+  button[aria-label="Administrar cronologías"],
+  button[aria-label="Cualquier persona puede responder"],
+  [data-testid="toolBar"] button:not([data-testid="tweetButtonInline"]) {
+    background-color: transparent !important;
+    color: var(--nord8) !important;
+    border-color: transparent !important;
+  }
+
+  button[aria-label="Administrar cronologías"] *,
+  .r-1bwzh9t,
+  svg.r-1bwzh9t,
+  svg.r-1bwzh9t * {
+    color: var(--nord8) !important;
+    fill: currentColor !important;
+    stroke: currentColor !important;
+  }
+
+  button[aria-label="Administrar cronologías"]:hover,
+  button[aria-label="Cualquier persona puede responder"]:hover,
+  [data-testid="toolBar"] button:not([data-testid="tweetButtonInline"]):hover {
+    background-color: rgba(136, 192, 208, .12) !important;
+    color: var(--nord7) !important;
+  }
+
+  button[aria-label="Administrar cronologías"]:hover *,
+  button:hover svg.r-1bwzh9t,
+  button:hover svg.r-1bwzh9t * {
+    color: var(--nord7) !important;
+  }
+
+  [data-testid="tweetButtonInline"],
+  [data-testid="tweetButton"] {
+    background-color: var(--nord8) !important;
+    color: var(--nord0) !important;
+  }
+
+  [data-testid="tweetButtonInline"] *,
+  [data-testid="tweetButton"] * {
+    color: var(--nord0) !important;
+  }
+
+  [data-testid="unsentButton"],
+  [data-testid="unsentButton"] * {
+    background-color: transparent !important;
+    color: var(--nord8) !important;
+    border-color: transparent !important;
+  }
+
+  [data-testid="unsentButton"]:hover {
+    background-color: rgba(136, 192, 208, .12) !important;
+  }
+
+  [data-testid="progressBar-bar"] {
+    background-color: var(--nord8) !important;
+  }
+
+  div:has([data-testid="app-bar-close"]):has([data-testid="tweetTextarea_0"]),
+  div:has([data-testid="tweetTextarea_0"]):has([data-testid="tweetButton"]) {
+    background-color: var(--nord0) !important;
+    color: var(--nord6) !important;
+    border-color: rgba(236, 239, 244, .14) !important;
+  }
+
+  /* Search y campos. */
+  div:has(> form[role="search"]),
+  form[role="search"],
+  form[role="search"] *,
+  input,
+  [data-testid="SearchBox_Search_Input_label"] {
+    background-color: var(--nord1) !important;
+    color: var(--nord6) !important;
+    border-color: rgba(236, 239, 244, .12) !important;
+  }
+
+  input::placeholder {
+    color: rgba(216, 222, 233, .58) !important;
+  }
+
+  /* Cajones inferiores: Chat y Grok, sin hover rectangular que sobresalga. */
+  [data-testid="GrokDrawer"],
+  [data-testid="chat-drawer-root"] {
+    background-color: transparent !important;
+  }
+
+  [data-testid="GrokDrawerHeader"],
+  [data-testid="chat-drawer-main"] {
+    background-color: var(--nord1) !important;
+    border-color: rgba(236, 239, 244, .14) !important;
+  }
+
+  [data-testid="GrokDrawerHeader"]:hover,
+  [data-testid="chat-drawer-main"]:hover {
+    background-color: var(--nord2) !important;
+  }
+
+  /* Header de detalle de post. */
+  [data-testid="app-bar-back"],
+  [data-testid="app-bar-close"],
+  [data-testid="app-bar-back"] *,
+  [data-testid="app-bar-close"] * {
+    color: var(--nord5) !important;
+    border-color: transparent !important;
+  }
+
+  [data-testid="app-bar-back"]:hover,
+  [data-testid="app-bar-close"]:hover {
+    background-color: rgba(236, 239, 244, .10) !important;
+  }
+
+  [style*="border-bottom: 2px solid rgb(239, 243, 244)"],
+  [style*="border-bottom:2px solid rgb(239,243,244)"] {
+    border-bottom-color: var(--nord5) !important;
+  }
+
+  /* Grok expandido. */
+  [data-testid="GrokDrawerHeader"],
+  [data-testid="GrokDrawerHeader"] button,
+  div:has(textarea[placeholder="Pregunta cualquier cosa"]),
+  div:has(> textarea[placeholder="Pregunta cualquier cosa"]) {
+    background-color: var(--nord1) !important;
+    color: var(--nord6) !important;
+    border-color: rgba(236, 239, 244, .14) !important;
+  }
+
+  [data-testid="GrokDrawerHeader"] button:hover,
+  div:has(textarea[placeholder="Pregunta cualquier cosa"]) button:hover {
+    background-color: var(--nord2) !important;
+  }
+
+  textarea[placeholder="Pregunta cualquier cosa"] {
+    background-color: transparent !important;
+    color: var(--nord6) !important;
+  }
+
+  textarea[placeholder="Pregunta cualquier cosa"]::placeholder {
+    color: rgba(216, 222, 233, .58) !important;
+  }
+
+  div:has(textarea[placeholder="Pregunta cualquier cosa"]) button[style*="background-color: rgb(0, 0, 0)"],
+  div:has(textarea[placeholder="Pregunta cualquier cosa"]) button[style*="background-color:rgb(0,0,0)"] {
+    background-color: var(--nord0) !important;
+    border-color: rgba(236, 239, 244, .16) !important;
+    color: var(--nord5) !important;
+  }
+
+  /* Menús/popovers: Más, perfil, tres puntos, autocompletado. */
+  [role="menu"],
+  [role="dialog"],
+  [role="listbox"],
+  [data-testid="Dropdown"],
+  [data-testid="HoverCard"],
+  [data-testid="sheetDialog"],
+  [data-testid="confirmationSheetDialog"],
+  div[style*="box-shadow"] {
+    background-color: var(--nord1) !important;
+    color: var(--nord6) !important;
+    border-color: rgba(236, 239, 244, .14) !important;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, .38) !important;
+  }
+
+  [role="menuitem"],
+  [role="option"],
+  [data-testid="Dropdown"] [role="button"] {
+    color: var(--nord5) !important;
+  }
+
+  [role="menuitem"]:hover,
+  [role="option"]:hover,
+  [data-testid="Dropdown"] [role="button"]:hover {
+    background-color: rgba(236, 239, 244, .10) !important;
+    color: var(--nord6) !important;
+  }
+
+  /* Tabs/indicadores. */
+  [role="tab"][aria-selected="true"],
+  [aria-current="page"] {
+    color: var(--nord6) !important;
+  }
+
+  [style*="background-color:rgb(29,155,240)"][style*="height:4px"],
+  [style*="background-color: rgb(29, 155, 240)"][style*="height: 4px"] {
+    background-color: var(--nord8) !important;
+  }
+
+  ::selection {
+    background: rgba(136, 192, 208, .35) !important;
+    color: var(--nord6) !important;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(216, 222, 233, .22) !important;
+    border-radius: 999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(216, 222, 233, .36) !important;
+  }
+}

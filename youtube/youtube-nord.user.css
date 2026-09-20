@@ -1,0 +1,410 @@
+/* ==UserStyle==
+@name         YouTube Nord
+@namespace    local.youtube.nord
+@version      1.0.3
+@description  Tema Nord conservador para YouTube
+@author       pi
+@match        https://www.youtube.com/*
+@match        https://youtube.com/*
+@match        https://m.youtube.com/*
+==/UserStyle== */
+
+@-moz-document domain("youtube.com") {
+  :root,
+  html[dark],
+  ytd-app,
+  body {
+    color-scheme: dark !important;
+
+    --nord0: #2e3440;
+    --nord1: #3b4252;
+    --nord2: #434c5e;
+    --nord3: #4c566a;
+    --nord4: #d8dee9;
+    --nord5: #e5e9f0;
+    --nord6: #eceff4;
+    --nord7: #8fbcbb;
+    --nord8: #88c0d0;
+    --nord9: #81a1c1;
+    --nord10: #5e81ac;
+    --nord11: #bf616a;
+    --nord12: #d08770;
+    --nord13: #ebcb8b;
+    --nord14: #a3be8c;
+    --nord15: #b48ead;
+
+    /* Tokens nativos de YouTube/Polymer. */
+    --yt-spec-base-background: var(--nord0) !important;
+    --yt-spec-raised-background: var(--nord1) !important;
+    --yt-spec-menu-background: var(--nord1) !important;
+    --yt-spec-inverted-background: var(--nord6) !important;
+    --yt-spec-additive-background: rgba(236, 239, 244, .10) !important;
+    --yt-spec-outline: rgba(236, 239, 244, .14) !important;
+    --yt-spec-outline-inverse: rgba(46, 52, 64, .20) !important;
+    --yt-spec-text-primary: var(--nord6) !important;
+    --yt-spec-text-secondary: rgba(216, 222, 233, .72) !important;
+    --yt-spec-text-disabled: rgba(216, 222, 233, .42) !important;
+    --yt-spec-icon-active-other: var(--nord6) !important;
+    --yt-spec-icon-inactive: var(--nord4) !important;
+    --yt-spec-call-to-action: var(--nord8) !important;
+    --yt-spec-suggested-action: rgba(136, 192, 208, .16) !important;
+    --yt-spec-badge-chip-background: var(--nord2) !important;
+    --yt-spec-button-chip-background-hover: var(--nord2) !important;
+    --yt-spec-touch-response: rgba(236, 239, 244, .12) !important;
+    --yt-spec-filled-button-text: var(--nord0) !important;
+    --yt-spec-static-brand-red: var(--nord11) !important;
+    --yt-spec-themed-blue: var(--nord8) !important;
+    --yt-spec-brand-background-solid: var(--nord0) !important;
+    --yt-spec-brand-background-primary: var(--nord0) !important;
+    --yt-spec-brand-background-secondary: var(--nord1) !important;
+
+    --primary-background-color: var(--nord0) !important;
+    --secondary-background-color: var(--nord1) !important;
+    --paper-dialog-background-color: var(--nord1) !important;
+    --paper-listbox-background-color: var(--nord1) !important;
+    --paper-menu-background-color: var(--nord1) !important;
+    --paper-menu-button-dropdown-background: var(--nord1) !important;
+    --primary-text-color: var(--nord6) !important;
+    --secondary-text-color: rgba(216, 222, 233, .72) !important;
+    --disabled-text-color: rgba(216, 222, 233, .42) !important;
+    --divider-color: rgba(236, 239, 244, .14) !important;
+    --accent-color: var(--nord8) !important;
+    --paper-spinner-color: var(--nord8) !important;
+  }
+
+  html,
+  body,
+  ytd-app,
+  #page-manager,
+  ytd-watch-flexy,
+  ytd-browse,
+  ytd-two-column-browse-results-renderer {
+    background: var(--nord0) !important;
+    color: var(--nord6) !important;
+  }
+
+  /* Cabecera, drawer y paneles. */
+  ytd-masthead,
+  #masthead,
+  #guide-content,
+  ytd-mini-guide-renderer,
+  ytd-popup-container,
+  tp-yt-paper-dialog,
+  tp-yt-paper-listbox,
+  ytd-menu-popup-renderer,
+  ytd-multi-page-menu-renderer,
+  ytd-engagement-panel-section-list-renderer,
+  ytd-playlist-panel-renderer {
+    background: var(--nord1) !important;
+    color: var(--nord6) !important;
+    border-color: rgba(236, 239, 244, .14) !important;
+  }
+
+  ytd-masthead {
+    box-shadow: 0 1px 0 rgba(236, 239, 244, .10) !important;
+  }
+
+  /* Buscador: solo colorear la cápsula interna, no todo el host. */
+  yt-searchbox,
+  #search-form,
+  #search-input {
+    background: transparent !important;
+    color: var(--nord6) !important;
+  }
+
+  .ytSearchboxComponentInputBox,
+  .ytSearchboxComponentInputBoxDark,
+  #container.ytd-searchbox {
+    background: #252a33 !important;
+    border-color: rgba(236, 239, 244, .18) !important;
+    box-shadow: none !important;
+  }
+
+  .ytSearchboxComponentInput,
+  input#search,
+  input[name="search_query"] {
+    background: transparent !important;
+    color: var(--nord6) !important;
+  }
+
+  #search-icon-legacy,
+  .ytSearchboxComponentSearchButton,
+  .ytSearchboxComponentSearchButtonDark,
+  button[aria-label="Buscar"],
+  button[aria-label="Search"] {
+    background: var(--nord1) !important;
+    border-color: rgba(236, 239, 244, .18) !important;
+    color: var(--nord6) !important;
+  }
+
+  .ytSearchboxComponentInputBox:hover,
+  .ytSearchboxComponentSearchButton:hover {
+    background: var(--nord2) !important;
+  }
+
+  input::placeholder,
+  yt-searchbox [contenteditable="true"]:empty::before {
+    color: rgba(216, 222, 233, .58) !important;
+  }
+
+  /* Texto y enlaces. */
+  #video-title,
+  h1,
+  h2,
+  h3,
+  yt-formatted-string,
+  yt-attributed-string,
+  .yt-core-attributed-string,
+  .yt-lockup-metadata-view-model-wiz__title,
+  .yt-content-metadata-view-model-wiz__metadata-text {
+    color: var(--nord6) !important;
+  }
+
+  #metadata,
+  #metadata-line,
+  #owner-sub-count,
+  ytd-video-meta-block,
+  yt-content-metadata-view-model,
+  .yt-content-metadata-view-model-wiz__metadata-text,
+  .yt-core-attributed-string--link-inherit-color {
+    color: rgba(216, 222, 233, .72) !important;
+  }
+
+  a,
+  a.yt-simple-endpoint,
+  .yt-core-attributed-string__link,
+  yt-formatted-string a {
+    color: var(--nord8) !important;
+  }
+
+  a:hover,
+  a.yt-simple-endpoint:hover,
+  .yt-core-attributed-string__link:hover {
+    color: var(--nord7) !important;
+  }
+
+  /* Botones/chips sin romper geometría. */
+  yt-chip-cloud-chip-renderer,
+  ytd-feed-filter-chip-bar-renderer yt-chip-cloud-chip-renderer,
+  .ytChipShapeInactive,
+  .yt-spec-button-shape-next--tonal,
+  .ytSpecButtonShapeNextTonal,
+  .yt-spec-button-shape-next--mono,
+  .ytSpecButtonShapeNextMono,
+  button-view-model button,
+  yt-button-shape button {
+    background-color: var(--nord2) !important;
+    color: var(--nord6) !important;
+    border-color: rgba(236, 239, 244, .12) !important;
+  }
+
+  yt-chip-cloud-chip-renderer[chip-style="STYLE_DEFAULT"],
+  .ytChipShapeActive,
+  .yt-spec-button-shape-next--filled,
+  .ytSpecButtonShapeNextFilled,
+  ytd-subscribe-button-renderer button {
+    background-color: var(--nord8) !important;
+    color: var(--nord0) !important;
+  }
+
+  yt-chip-cloud-chip-renderer:hover,
+  button-view-model button:hover,
+  yt-button-shape button:hover,
+  ytd-menu-service-item-renderer:hover,
+  ytd-compact-link-renderer:hover,
+  tp-yt-paper-item:hover {
+    background-color: var(--nord3) !important;
+  }
+
+  /* Barra de filtros/chips. */
+  ytd-feed-filter-chip-bar-renderer,
+  ytd-feed-filter-chip-bar-renderer[frosted-glass-mode],
+  ytd-feed-filter-chip-bar-renderer #chips-wrapper,
+  ytd-feed-filter-chip-bar-renderer #chips-content,
+  ytd-feed-filter-chip-bar-renderer #scroll-container,
+  ytd-feed-filter-chip-bar-renderer #chips,
+  ytd-feed-filter-chip-bar-renderer #selected-chip-content,
+  yt-chip-cloud-renderer,
+  .ytChipBarViewModelHost,
+  .ytChipBarViewModelChipBarScrollContainer {
+    background: var(--nord0) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  ytd-feed-filter-chip-bar-renderer #left-arrow,
+  ytd-feed-filter-chip-bar-renderer #right-arrow,
+  ytd-feed-filter-chip-bar-renderer #left-arrow-button,
+  ytd-feed-filter-chip-bar-renderer #right-arrow-button {
+    background: var(--nord0) !important;
+  }
+
+  ytd-feed-filter-chip-bar-renderer #left-arrow::after,
+  ytd-feed-filter-chip-bar-renderer #right-arrow::before,
+  .ytChipBarViewModelLeftArrowContainer::after,
+  .ytChipBarViewModelRightArrowContainer::before {
+    background: none !important;
+  }
+
+  ytd-feed-filter-chip-bar-renderer button[aria-label="Anterior"],
+  ytd-feed-filter-chip-bar-renderer button[aria-label="Siguiente"] {
+    background: var(--nord1) !important;
+    color: var(--nord6) !important;
+  }
+
+  ytd-feed-filter-chip-bar-renderer yt-chip-cloud-chip-renderer,
+  ytd-feed-filter-chip-bar-renderer #chip-shape-container,
+  chip-shape,
+  .ytChipShapeHost,
+  .ytChipShapeButtonReset,
+  .ytChipShapeInactive,
+  .ytChipShapeChip {
+    background: transparent !important;
+    box-shadow: none !important;
+    color: var(--nord6) !important;
+  }
+
+  .ytChipShapeInactive,
+  .ytChipShapeChip.ytChipShapeInactive {
+    background: var(--nord1) !important;
+    border-radius: 8px !important;
+  }
+
+  .ytChipShapeInactive:hover,
+  .ytChipShapeButtonReset:hover .ytChipShapeInactive {
+    background: var(--nord2) !important;
+  }
+
+  .ytChipShapeActive,
+  .ytChipShapeChip.ytChipShapeActive {
+    background: var(--nord8) !important;
+    border-radius: 8px !important;
+    color: var(--nord0) !important;
+  }
+
+  .ytChipShapeActive * {
+    color: var(--nord0) !important;
+  }
+
+  /* Página de video. */
+  #cinematics,
+  #cinematics-container,
+  #cinematics-full-bleed-container {
+    display: none !important;
+  }
+
+  ytd-watch-metadata {
+    --yt-saturated-base-background: var(--nord0) !important;
+    --yt-saturated-raised-background: var(--nord1) !important;
+    --yt-saturated-text-primary: var(--nord6) !important;
+    --yt-saturated-text-secondary: rgba(216, 222, 233, .72) !important;
+  }
+
+  ytd-watch-metadata,
+  #above-the-fold,
+  #bottom-row,
+  #description,
+  ytd-text-inline-expander,
+  ytd-watch-info-text,
+  ytd-metadata-row-container-renderer,
+  #comments,
+  ytd-comment-thread-renderer,
+  ytd-watch-next-secondary-results-renderer,
+  yt-lockup-view-model,
+  ytd-compact-video-renderer,
+  ytd-rich-item-renderer {
+    background-color: var(--nord0) !important;
+    color: var(--nord6) !important;
+    border-color: rgba(236, 239, 244, .12) !important;
+  }
+
+  #description,
+  ytd-text-inline-expander,
+  .ytd-watch-metadata[rounded-container] {
+    background-color: var(--nord1) !important;
+  }
+
+  /* Thumbnails/badges/overlays. */
+  ytd-badge-supported-renderer,
+  badge-shape,
+  yt-badge-view-model,
+  yt-thumbnail-badge-view-model,
+  yt-thumbnail-overlay-badge-view-model {
+    background-color: rgba(46, 52, 64, .86) !important;
+    color: var(--nord5) !important;
+  }
+
+  /* Iconos. */
+  yt-icon,
+  yt-icon-shape,
+  .yt-icon-shape,
+  svg,
+  path {
+    color: var(--nord5) !important;
+    fill: currentColor !important;
+  }
+
+  ytd-topbar-logo-renderer path,
+  ytd-logo path[fill="#FF0000"],
+  path[fill="#FF0000"] {
+    fill: var(--nord11) !important;
+  }
+
+  /* Player: solo acento, no tocar video. */
+  .ytp-swatch-background-color,
+  .ytp-play-progress,
+  .ytp-volume-slider-handle,
+  .ytp-volume-slider-handle::before {
+    background-color: var(--nord8) !important;
+  }
+
+  .ytp-swatch-color,
+  .ytp-button:hover,
+  .ytp-menuitem[aria-checked="true"] .ytp-menuitem-toggle-checkbox {
+    color: var(--nord8) !important;
+  }
+
+  .ytp-menuitem,
+  .ytp-popup,
+  .ytp-panel,
+  .ytp-settings-menu {
+    background-color: rgba(59, 66, 82, .96) !important;
+    color: var(--nord6) !important;
+  }
+
+  /* Formularios, tooltips y menús. */
+  textarea,
+  input,
+  tp-yt-paper-input,
+  yt-dropdown-menu,
+  yt-popover,
+  yt-tooltip {
+    background-color: var(--nord1) !important;
+    color: var(--nord6) !important;
+    border-color: rgba(236, 239, 244, .14) !important;
+  }
+
+  [role="tooltip"],
+  .ytp-tooltip,
+  .ytTooltipContainerHost,
+  .ytPopoverComponentHost {
+    background-color: var(--nord1) !important;
+    color: var(--nord6) !important;
+    border-color: rgba(236, 239, 244, .14) !important;
+    box-shadow: 0 14px 42px rgba(0, 0, 0, .38) !important;
+  }
+
+  ::selection {
+    background: rgba(136, 192, 208, .35) !important;
+    color: var(--nord6) !important;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(216, 222, 233, .22) !important;
+    border-radius: 999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(216, 222, 233, .36) !important;
+  }
+}
