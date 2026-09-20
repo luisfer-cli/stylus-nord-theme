@@ -1,0 +1,223 @@
+/* ==UserStyle==
+@name         ChatGPT Nord
+@namespace    local.chatgpt.nord
+@version      1.0.3
+@description  Tema Nord conservador para chatgpt.com
+@author       pi
+@match        https://chatgpt.com/*
+@match        https://chat.openai.com/*
+==/UserStyle== */
+
+@-moz-document domain("chatgpt.com"), domain("chat.openai.com") {
+  :root,
+  html.dark,
+  html.dark body,
+  html.dark :not(:where(.light, .light *)) {
+    color-scheme: dark !important;
+
+    --nord0: #2e3440;
+    --nord1: #3b4252;
+    --nord2: #434c5e;
+    --nord3: #4c566a;
+    --nord4: #d8dee9;
+    --nord5: #e5e9f0;
+    --nord6: #eceff4;
+    --nord7: #8fbcbb;
+    --nord8: #88c0d0;
+    --nord9: #81a1c1;
+    --nord10: #5e81ac;
+    --nord11: #bf616a;
+    --nord12: #d08770;
+    --nord13: #ebcb8b;
+    --nord14: #a3be8c;
+    --nord15: #b48ead;
+
+    /* Recolorear tokens, no geometría: mantiene bordes, sombras y tamaños originales. */
+    --bg-primary: var(--nord0) !important;
+    --bg-secondary: var(--nord1) !important;
+    --bg-tertiary: var(--nord2) !important;
+    --bg-elevated-primary: var(--nord1) !important;
+    --bg-elevated-secondary: #242933 !important;
+    --main-surface-primary: var(--nord0) !important;
+    --main-surface-background: rgba(46, 52, 64, 0.94) !important;
+    --main-surface-secondary: var(--nord1) !important;
+    --main-surface-secondary-selected: rgba(136, 192, 208, 0.16) !important;
+    --main-surface-tertiary: var(--nord2) !important;
+    --message-surface: rgba(67, 76, 94, 0.82) !important;
+    --composer-surface: var(--message-surface) !important;
+    --composer-surface-primary: var(--nord1) !important;
+
+    --sidebar-surface: #262c38 !important;
+    --sidebar-surface-primary: #262c38 !important;
+    --sidebar-surface-secondary: var(--nord1) !important;
+    --sidebar-surface-tertiary: var(--nord2) !important;
+    --sidebar-body-primary: var(--nord5) !important;
+    --sidebar-title-primary: rgba(229, 233, 240, 0.55) !important;
+    --sidebar-icon: var(--nord4) !important;
+
+    --text-primary: var(--nord6) !important;
+    --text-secondary: rgba(229, 233, 240, 0.78) !important;
+    --text-tertiary: rgba(216, 222, 233, 0.58) !important;
+    --text-quaternary: rgba(216, 222, 233, 0.42) !important;
+    --text-placeholder: rgba(216, 222, 233, 0.7) !important;
+    --content-primary: var(--nord6) !important;
+    --content-secondary: var(--nord4) !important;
+    --link: var(--nord8) !important;
+    --link-hover: var(--nord7) !important;
+
+    --border-xlight: rgba(236, 239, 244, 0.06) !important;
+    --border-light: rgba(236, 239, 244, 0.12) !important;
+    --border-medium: rgba(236, 239, 244, 0.18) !important;
+    --border-heavy: rgba(236, 239, 244, 0.25) !important;
+    --border-xheavy: rgba(236, 239, 244, 0.32) !important;
+    --border-sharp: rgba(236, 239, 244, 0.08) !important;
+    --surface-hover: rgba(236, 239, 244, 0.12) !important;
+    --scrollbar-color: rgba(216, 222, 233, 0.2) !important;
+    --scrollbar-color-hover: rgba(216, 222, 233, 0.34) !important;
+
+    --theme-user-msg-bg: var(--nord10) !important;
+    --theme-user-msg-text: var(--nord6) !important;
+    --theme-submit-btn-bg: var(--nord8) !important;
+    --theme-submit-btn-text: var(--nord0) !important;
+    --theme-secondary-btn-bg: var(--nord2) !important;
+    --theme-secondary-btn-text: var(--nord6) !important;
+    --theme-user-selection-bg: rgba(136, 192, 208, 0.35) !important;
+
+    --accent-default: var(--nord8) !important;
+    --interactive-bg-secondary-default: transparent !important;
+    --interactive-bg-secondary-hover: rgba(236, 239, 244, 0.1) !important;
+    --interactive-bg-secondary-press: rgba(236, 239, 244, 0.14) !important;
+    --interactive-bg-secondary-selected: rgba(136, 192, 208, 0.14) !important;
+    --interactive-label-secondary-default: var(--nord4) !important;
+    --interactive-label-secondary-hover: var(--nord6) !important;
+    --interactive-label-secondary-press: var(--nord6) !important;
+    --interactive-icon-secondary-default: var(--nord4) !important;
+    --interactive-icon-secondary-hover: var(--nord6) !important;
+    --interactive-border-focus: var(--nord8) !important;
+    --interactive-focus-ring-primary: var(--nord8) !important;
+  }
+
+  html.dark,
+  html.dark body {
+    background: var(--nord0) !important;
+    color: var(--nord6) !important;
+  }
+
+  /* Ajustes puntuales que el HTML exportado muestra fuera de tokens. */
+  .user-message-bubble-color {
+    background-color: var(--theme-user-msg-bg) !important;
+    color: var(--theme-user-msg-text) !important;
+  }
+
+  .composer-submit-button-color {
+    background-color: var(--theme-submit-btn-bg) !important;
+    color: var(--theme-submit-btn-text) !important;
+  }
+
+  /* Código: sin bloque rectangular extra alrededor. */
+  [class*="code-block-surface"],
+  [class*="bg-(--code-block-surface)"],
+  [data-testid="code-block-viewer"],
+  .cm-editor,
+  .cm-scroller,
+  pre {
+    --code-block-surface: transparent !important;
+    background-color: transparent !important;
+  }
+
+  code {
+    color: var(--nord6) !important;
+  }
+
+  :not(pre) > code {
+    background-color: rgba(67, 76, 94, 0.45) !important;
+  }
+
+  .hljs-keyword,
+  .hljs-selector-tag,
+  .hljs-title {
+    color: var(--nord9) !important;
+  }
+
+  .hljs-string,
+  .hljs-attr {
+    color: var(--nord14) !important;
+  }
+
+  .hljs-number,
+  .hljs-literal {
+    color: var(--nord15) !important;
+  }
+
+  .hljs-comment {
+    color: var(--nord3) !important;
+  }
+
+  /* Citas/enlaces tipo "Docker Documentation". */
+  [data-testid="webpage-citation-pill"] a,
+  a[href*="utm_source=chatgpt.com"] {
+    background-color: rgba(67, 76, 94, 0.72) !important;
+    color: var(--nord4) !important;
+    border-color: rgba(236, 239, 244, 0.12) !important;
+  }
+
+  [data-testid="webpage-citation-pill"] a:hover,
+  a[href*="utm_source=chatgpt.com"]:hover {
+    background-color: rgba(76, 86, 106, 0.86) !important;
+    color: var(--nord8) !important;
+  }
+
+  .decorated-link,
+  .markdown a {
+    color: var(--nord8) !important;
+    text-decoration-color: rgba(136, 192, 208, 0.45) !important;
+  }
+
+  .decorated-link:hover,
+  .markdown a:hover {
+    color: var(--nord7) !important;
+    text-decoration-color: var(--nord7) !important;
+  }
+
+  /* Popovers/menús Radix: perfil, tres puntos, opciones. */
+  [data-radix-popper-content-wrapper] > *,
+  [role="menu"],
+  [role="dialog"],
+  [role="listbox"],
+  [cmdk-root],
+  [data-floating-ui-portal] > * {
+    background-color: var(--nord1) !important;
+    color: var(--nord6) !important;
+    border-color: rgba(236, 239, 244, 0.14) !important;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.38) !important;
+  }
+
+  [role="menuitem"],
+  [role="option"],
+  [data-radix-popper-content-wrapper] button,
+  [data-radix-popper-content-wrapper] a {
+    color: var(--nord5) !important;
+  }
+
+  [role="menuitem"]:hover,
+  [role="option"]:hover,
+  [data-radix-popper-content-wrapper] button:hover,
+  [data-radix-popper-content-wrapper] a:hover {
+    background-color: var(--interactive-bg-secondary-hover) !important;
+    color: var(--nord6) !important;
+  }
+
+  ::selection {
+    background: var(--theme-user-selection-bg) !important;
+    color: var(--nord6) !important;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-color) !important;
+    border-radius: 999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-color-hover) !important;
+  }
+}
