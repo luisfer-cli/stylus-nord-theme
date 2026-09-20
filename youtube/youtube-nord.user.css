@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         YouTube Nord
 @namespace    local.youtube.nord
-@version      1.0.3
+@version      1.0.4
 @description  Tema Nord conservador para YouTube
 @author       pi
 @match        https://www.youtube.com/*
@@ -370,6 +370,30 @@
   .ytp-settings-menu {
     background-color: rgba(59, 66, 82, .96) !important;
     color: var(--nord6) !important;
+  }
+
+  /* Header de menús simples: notificaciones, cuenta, etc. */
+  ytd-simple-menu-header-renderer,
+  ytd-simple-menu-header-renderer #buttons,
+  ytd-simple-menu-header-renderer h2 {
+    background: var(--nord1) !important;
+    color: var(--nord6) !important;
+    border-color: rgba(236, 239, 244, .14) !important;
+  }
+
+  ytd-simple-menu-header-renderer a,
+  ytd-simple-menu-header-renderer button,
+  ytd-simple-menu-header-renderer yt-icon,
+  ytd-simple-menu-header-renderer svg,
+  ytd-simple-menu-header-renderer path {
+    background: transparent !important;
+    color: var(--nord5) !important;
+    fill: currentColor !important;
+  }
+
+  ytd-simple-menu-header-renderer a:hover,
+  ytd-simple-menu-header-renderer button:hover {
+    background: rgba(236, 239, 244, .10) !important;
   }
 
   /* Formularios, tooltips y menús. */
