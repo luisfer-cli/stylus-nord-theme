@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         YouTube Nord
 @namespace    local.youtube.nord
-@version      1.0.4
+@version      1.0.8
 @description  Conservative Nord theme for YouTube
 @author       pi
 @match        https://www.youtube.com/*
@@ -324,6 +324,78 @@
     background-color: var(--nord1) !important;
   }
 
+  /* Comments: YouTube uses empty badge/button hosts here; keep them invisible. */
+  ytd-comment-view-model,
+  ytd-comment-view-model #body,
+  ytd-comment-view-model #main,
+  ytd-comment-view-model #header,
+  ytd-comment-view-model #linked-comment-badge,
+  ytd-comment-view-model #author-comment-badge,
+  ytd-comment-view-model #sponsor-comment-badge,
+  ytd-comment-view-model #creator-heart,
+  ytd-comment-replies-renderer,
+  ytd-comment-replies-renderer #collapsed-threads,
+  ytd-comment-replies-renderer #expanded-threads,
+  yt-sub-thread {
+    background: transparent !important;
+    box-shadow: none !important;
+    border-color: transparent !important;
+  }
+
+  ytd-comment-view-model ytd-badge-supported-renderer,
+  ytd-comment-view-model badge-shape {
+    background: transparent !important;
+  }
+
+  ytd-comment-view-model badge-shape:not(:empty) {
+    background: var(--nord2) !important;
+  }
+
+  ytd-comment-engagement-bar yt-button-shape button,
+  ytd-comment-engagement-bar button,
+  ytd-comment-replies-renderer #more-replies button,
+  ytd-comment-replies-renderer #less-replies button,
+  ytd-comment-replies-renderer #more-replies-sub-thread button {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+    color: var(--nord8) !important;
+  }
+
+  ytd-comment-engagement-bar .ytSpecTouchFeedbackShapeStroke,
+  ytd-comment-engagement-bar .ytSpecTouchFeedbackShapeFill,
+  ytd-comment-replies-renderer .ytSpecTouchFeedbackShapeStroke,
+  ytd-comment-replies-renderer .ytSpecTouchFeedbackShapeFill,
+  ytd-comment-engagement-bar yt-interaction .stroke,
+  ytd-comment-engagement-bar yt-interaction .fill {
+    background: transparent !important;
+    border-color: transparent !important;
+    opacity: 0 !important;
+  }
+
+  ytd-comment-engagement-bar yt-button-shape button:hover,
+  ytd-comment-engagement-bar button:hover,
+  ytd-comment-replies-renderer #more-replies button:hover,
+  ytd-comment-replies-renderer #less-replies button:hover,
+  ytd-comment-replies-renderer #more-replies-sub-thread button:hover {
+    background: rgba(136, 192, 208, 0.12) !important;
+    background-color: rgba(136, 192, 208, 0.12) !important;
+  }
+
+  ytd-comment-engagement-bar button:hover .ytSpecTouchFeedbackShapeFill,
+  ytd-comment-replies-renderer button:hover .ytSpecTouchFeedbackShapeFill {
+    opacity: 1 !important;
+    background: rgba(136, 192, 208, 0.12) !important;
+  }
+
+  ytd-comment-engagement-bar #vote-count-middle,
+  ytd-comment-view-model #published-time-text,
+  ytd-comment-view-model #published-time-text a {
+    color: rgba(216, 222, 233, 0.72) !important;
+  }
+
   /* Thumbnails/badges/overlays. */
   ytd-badge-supported-renderer,
   badge-shape,
@@ -353,9 +425,19 @@
   /* Player: solo acento, no tocar video. */
   .ytp-swatch-background-color,
   .ytp-play-progress,
+  .ytp-progress-bar-container .ytp-play-progress,
+  ytd-thumbnail-overlay-resume-playback-renderer #progress,
+  .ytThumbnailOverlayProgressBarHostWatchedProgressBarSegment,
+  .ytProgressBarLineProgressBarPlayed,
   .ytp-volume-slider-handle,
   .ytp-volume-slider-handle::before {
+    background: var(--nord8) !important;
     background-color: var(--nord8) !important;
+  }
+
+  .ytp-progress-bar-container .ytp-play-progress,
+  .ytProgressBarPlayheadProgressBarPlayheadDot {
+    border-color: var(--nord8) !important;
   }
 
   .ytp-swatch-color,
@@ -430,5 +512,104 @@
 
   ::-webkit-scrollbar-thumb:hover {
     background: rgba(216, 222, 233, 0.36) !important;
+  }
+
+  /* Live chat. */
+  yt-live-chat-app,
+  yt-live-chat-renderer,
+  yt-live-chat-renderer #contents,
+  yt-live-chat-renderer #chat,
+  yt-live-chat-renderer #item-list,
+  yt-live-chat-item-list-renderer,
+  yt-live-chat-item-list-renderer #contents,
+  yt-live-chat-item-list-renderer #item-scroller,
+  yt-live-chat-header-renderer,
+  yt-live-chat-message-input-renderer,
+  yt-live-chat-message-input-renderer #container {
+    background: var(--nord0) !important;
+    color: var(--nord6) !important;
+    border-color: rgba(236, 239, 244, 0.14) !important;
+  }
+
+  yt-live-chat-header-renderer,
+  yt-live-chat-renderer #separator,
+  yt-live-chat-message-input-renderer,
+  yt-live-chat-banner-manager,
+  yt-live-chat-toast-renderer {
+    background: var(--nord1) !important;
+    border-color: rgba(236, 239, 244, 0.14) !important;
+  }
+
+  yt-live-chat-text-message-renderer,
+  yt-live-chat-viewer-engagement-message-renderer,
+  yt-live-chat-mode-change-message-renderer,
+  yt-live-chat-placeholder-item-renderer {
+    background: transparent !important;
+    color: var(--nord6) !important;
+  }
+
+  yt-live-chat-text-message-renderer:hover,
+  yt-live-chat-viewer-engagement-message-renderer:hover {
+    background: rgba(236, 239, 244, 0.06) !important;
+  }
+
+  yt-live-chat-text-message-renderer #message,
+  yt-live-chat-text-message-renderer #hover-message,
+  yt-live-chat-viewer-engagement-message-renderer,
+  yt-live-chat-message-input-renderer #input,
+  yt-live-chat-text-input-field-renderer #input {
+    color: var(--nord6) !important;
+  }
+
+  yt-live-chat-text-message-renderer #timestamp,
+  yt-live-chat-text-message-renderer #deleted-state,
+  yt-live-chat-message-input-renderer #count,
+  yt-live-chat-text-input-field-renderer #label,
+  yt-live-chat-header-renderer #title,
+  yt-live-chat-author-chip #author-name {
+    color: rgba(216, 222, 233, 0.72) !important;
+  }
+
+  yt-live-chat-author-chip[is-highlighted] #author-name,
+  yt-live-chat-author-chip #author-name.owner,
+  yt-live-chat-author-chip #author-name.moderator,
+  yt-live-chat-author-chip #author-name.member,
+  yt-live-chat-text-message-renderer[author-type="owner"] #author-name,
+  yt-live-chat-text-message-renderer[author-type="moderator"] #author-name,
+  yt-live-chat-text-message-renderer[author-type="member"] #author-name {
+    color: var(--nord8) !important;
+  }
+
+  yt-live-chat-paid-message-renderer #card,
+  yt-live-chat-paid-message-renderer #header,
+  yt-live-chat-paid-message-renderer #content,
+  yt-live-chat-paid-sticker-renderer #card,
+  yt-live-chat-membership-item-renderer #card {
+    background: var(--nord2) !important;
+    color: var(--nord6) !important;
+    border-color: rgba(236, 239, 244, 0.14) !important;
+  }
+
+  yt-live-chat-paid-message-renderer #author-name,
+  yt-live-chat-paid-message-renderer #purchase-amount,
+  yt-live-chat-paid-message-renderer #message,
+  yt-live-chat-paid-sticker-renderer #author-name,
+  yt-live-chat-membership-item-renderer #header-primary-text,
+  yt-live-chat-membership-item-renderer #header-subtext {
+    color: var(--nord6) !important;
+  }
+
+  yt-live-chat-ticker-renderer,
+  yt-live-chat-ticker-renderer #container,
+  yt-live-chat-ticker-renderer #ticker-bar {
+    background: var(--nord1) !important;
+    color: var(--nord6) !important;
+  }
+
+  yt-live-chat-text-input-field-renderer,
+  yt-live-chat-text-input-field-renderer #input,
+  yt-live-chat-message-input-renderer #input-container {
+    background: transparent !important;
+    border-color: rgba(236, 239, 244, 0.18) !important;
   }
 }
